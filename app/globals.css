@@ -2,47 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #f0f4f5;
-  --foreground: #212b32;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ground text-ink font-sans antialiased;
+    font-size: 1.0625rem;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 3px solid #1e5b4c;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: #cfe3db;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+@layer components {
+  /* A line quoted from the letter, marked the way a reviewer would with a pen. */
+  .mark-ok,
+  .mark-bad,
+  .mark-warn {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 2px;
+  }
+  .mark-ok {
+    background: linear-gradient(transparent 62%, #cfe8d7 62%);
+  }
+  .mark-bad {
+    background: linear-gradient(transparent 58%, #f6c9c1 58%);
+    text-decoration: underline wavy #b0281f;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 5px;
+  }
+  .mark-warn {
+    background: linear-gradient(transparent 62%, #f3e1b5 62%);
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-bold transition duration-200 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-primary {
+    @apply btn bg-accent px-5 py-3 text-paper hover:bg-accent-hover;
+  }
+  .btn-quiet {
+    @apply btn border border-line bg-paper px-4 py-2.5 text-ink hover:border-faint hover:bg-white;
+  }
+  .label {
+    @apply text-sm font-bold text-muted;
+  }
 }
 
-/* High readability for elderly patients & carers */
-.large-print {
-  font-size: 1.15rem;
-  line-height: 1.6;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-/* Print CSS for fridge card and nurse sign-off receipt */
+/* Print: the receipt becomes a large-print handover sheet. */
 @media print {
   body {
     background: #ffffff !important;
     color: #000000 !important;
   }
-
   .no-print {
     display: none !important;
   }
-
   .print-only {
     display: block !important;
   }
-
   .print-page {
     border: none !important;
     box-shadow: none !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
+    font-size: 14pt;
   }
-
   .print-break-inside-avoid {
     break-inside: avoid;
     page-break-inside: avoid;

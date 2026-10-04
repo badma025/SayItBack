@@ -119,16 +119,16 @@ export function PdfViewer({
   }, [pdfDoc, currentPage, scale, renderPage]);
 
   return (
-    <div className="flex flex-col h-full bg-gray-100 rounded-lg border border-gray-300 overflow-hidden shadow-sm">
+    <div className="flex h-full flex-col overflow-hidden rounded-lg border border-line bg-ground">
       {/* Top Toolbar */}
-      <div className="bg-white border-b border-gray-200 px-3 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line bg-paper px-3 py-2 text-sm">
         <div className="flex items-center gap-2">
-          <FileText className="w-4 h-4 text-[#005EB8]" />
-          <span className="font-bold text-gray-800">Ground-Truth PDF (pdf.js)</span>
+          <FileText className="h-4 w-4 text-muted" strokeWidth={1.75} aria-hidden />
+          <span className="font-bold">The PDF the hospital sent</span>
           {extractedDoc && (
-            <span className="hidden sm:inline-flex items-center gap-1 text-[11px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-200">
-              <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-              <span>Text layer extracted ({extractedDoc.fullText.length} chars)</span>
+            <span className="hidden items-center gap-1 text-sm text-ok sm:inline-flex">
+              <CheckCircle2 className="h-3.5 w-3.5" aria-hidden />
+              <span>Text read for checking</span>
             </span>
           )}
         </div>
@@ -190,11 +190,11 @@ export function PdfViewer({
       </div>
 
       {/* PDF Canvas Container */}
-      <div className="flex-1 overflow-auto p-4 flex justify-center items-start min-h-[460px] bg-slate-200/70">
+      <div className="flex-1 overflow-auto p-4 flex justify-center items-start min-h-[460px] bg-ground">
         {loading && (
           <div className="flex flex-col items-center justify-center p-12 text-gray-600">
-            <Loader2 className="w-8 h-8 animate-spin text-[#005EB8] mb-2" />
-            <p className="text-xs font-medium">Rendering PDF via pdf.js text engine...</p>
+            <Loader2 className="mb-2 h-7 w-7 animate-spin text-muted" aria-hidden />
+            <p className="text-sm">Opening the letter…</p>
           </div>
         )}
 
@@ -202,7 +202,7 @@ export function PdfViewer({
           <div className="p-6 max-w-md bg-white rounded border border-red-200 text-red-700 text-xs">
             <div className="flex items-center gap-2 font-bold mb-1">
               <AlertCircle className="w-4 h-4" />
-              <span>PDF Render Error</span>
+              <span>The PDF couldn't be shown</span>
             </div>
             <p>{error}</p>
           </div>
@@ -211,12 +211,6 @@ export function PdfViewer({
         <div className={`relative shadow-md bg-white ${loading ? "hidden" : "block"}`}>
           <canvas ref={canvasRef} className="block mx-auto max-w-full h-auto" />
         </div>
-      </div>
-
-      {/* Footer verification notice */}
-      <div className="bg-slate-50 border-t border-gray-200 px-3 py-1.5 text-[11px] text-gray-600 flex items-center justify-between">
-        <span>Golden Path: PDF with genuine text layer (non-circular quote verification)</span>
-        <span className="font-mono text-gray-500">St Thomas&apos; eDischarge (PRSB)</span>
       </div>
     </div>
   );

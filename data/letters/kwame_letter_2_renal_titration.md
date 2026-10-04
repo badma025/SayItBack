@@ -1,12 +1,12 @@
-# GUY'S AND ST THOMAS' NHS FOUNDATION TRUST
-## St Thomas' Hospital · Westminster Bridge Road, London SE1 7EH
+# THAMESBANK HOSPITALS TRUST (FICTIONAL)
+## Thamesbank General Hospital · Riverside Road, London
 ### ELECTRONIC DISCHARGE SUMMARY (eDischarge / TTO)
 
 ---
 
 ### 1. PATIENT DEMOGRAPHICS & IDENTIFIERS
 - **Patient Name:** MENSAH, Kwame
-- **NHS Number:** 482 910 3341
+- **NHS Number:** 999 000 0001
 - **Hospital Number (MRN):** TH-882914
 - **Date of Birth:** 14/03/1945 (Age: 81 years)
 - **Gender:** Male
@@ -24,13 +24,13 @@
 ---
 
 ### 2. ENCOUNTER & DISCHARGE DETAILS
-- **Hospital / Location:** St Thomas' Hospital
+- **Hospital / Location:** Thamesbank General Hospital
 - **Ward:** Hillyers Ward (Cardiology Step-Down & Complex Heart Failure Unit)
 - **Admission Date & Time:** 12/10/2026 11:00
 - **Discharge Date & Time:** 16/10/2026 15:00
 - **Admission Method:** Planned Transfer / Subacute Optimization
-- **Discharging Consultant:** Dr Simon Hughes, Consultant Cardiologist (GMC: 4920194)
-- **Discharging Clinician:** Dr Marcus Sterling, Clinical Fellow in Heart Failure (GMC: 7512849)
+- **Discharging Consultant:** Dr Simon Hughes, Consultant Cardiologist
+- **Discharging Clinician:** Dr Marcus Sterling, Clinical Fellow in Heart Failure
 - **Discharge Destination:** Home with family support
 
 ---
@@ -143,8 +143,8 @@ If Kwame or Efua observes:
 
 #### Contact Protocols:
 - **PRIMARY URGENT CONTACT (Specialist Team):**
-  - **Service:** St Thomas' Heart Failure Rapid Access Nurse Clinic
-  - **Direct Telephone Number:** **020 7188 5680**
+  - **Service:** Thamesbank Heart Failure Rapid Access Nurse Clinic
+  - **Direct Telephone Number:** **020 7946 0680**
   - **Hours:** Monday to Friday, 08:30 to 16:30
 - **OUT OF HOURS:**
   - Telephone **NHS 111**.
@@ -155,8 +155,8 @@ If Kwame or Efua observes:
 
 ### 10. FOLLOW-UP APPOINTMENTS & PLANNED CARE
 1. **Heart Failure Complex Optimization Clinic:**
-   - **Hospital:** St Thomas' Hospital
-   - **Clinic:** Lambeth Wing Heart Failure Clinic, Suite 2
+   - **Hospital:** Thamesbank General Hospital
+   - **Clinic:** River Wing Heart Failure Clinic, Suite 2
    - **Date & Time:** **Thursday 29 October 2026 at 14:00** (in 3 weeks)
    - **Seen by:** Clinical Nurse Specialist Team
 2. **GP Phlebotomy Review:**
@@ -165,7 +165,7 @@ If Kwame or Efua observes:
 ---
 
 ### 11. CLINICAL SIGN-OFF
-- **Discharging Doctor:** Dr Marcus Sterling, MBBS MRCP (GMC 7512849)  
+- **Discharging Doctor:** Dr Marcus Sterling, MBBS MRCP  
   Signature: *M. Sterling* · Date: 16/10/2026
 - **Ward Pharmacist:** S. Jenkins, MPharm (GPhC 2084910)  
   Signature: *S. Jenkins* · Date: 16/10/2026

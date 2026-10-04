@@ -36,7 +36,7 @@
 ---
 
 ## 3. Encounter & Admission Information
-- **Hospital Ward:** [Ward Name, e.g., Albert Ward (Cardiology & Frailty)]
+- **Hospital Ward:** [Ward Name, e.g., Elm Ward (Cardiology & Frailty)]
 - **Specialty:** [Cardiology / Geriatric Medicine / Acute Frailty]
 - **Admission Date & Time:** [DD/MM/YYYY HH:MM]
 - **Discharge Date & Time:** [DD/MM/YYYY HH:MM]

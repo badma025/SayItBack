@@ -32,16 +32,16 @@
   },
   "safety_critical_count": 47,
   "file_hashes": {
-    "data/templates/prsb_discharge_letter_template.md": "16b65473ef273356dfcbb5aa862f464c04e3e9f8f1c3780f5ca0716e7abd5de5",
+    "data/templates/prsb_discharge_letter_template.md": "efd16564fda7c727fd10e9161532ec08a7f13660f77a3bff39fa6ad558927be7",
     "data/templates/prsb_discharge_letter_template.json": "60262143f84123241064c9ed3c2b29568e2c069183d4e57c28021514c6c84d17",
-    "data/letters/kwame_letter_1_cardiology.md": "472d72864c17a78c5c10c468584dd1720e3d1dfd0677ffff728ab668d5fd1e28",
-    "data/letters/kwame_letter_1_cardiology.json": "c0bfe2cd3764d7dfcdbc84098226d627e506830910150735f8ebb1b9d67ff5e1",
-    "data/letters/kwame_letter_2_renal_titration.md": "674b9736e88639f57bfd1da6b2eaf37d5be1b2d59fc8a4b8b0f22221f03efc3f",
-    "data/letters/kwame_letter_2_renal_titration.json": "d1b3cd80eabf0b36d9280ddd7d6a3cab87272e9b38df57dd0277c72cb896181b",
-    "data/letters/kwame_letter_3_ambulatory_frailty.md": "4cc43f1516ee142963f8833525fe11f473c4603d51b5674ce4a5a897fc559e0d",
-    "data/letters/kwame_letter_3_ambulatory_frailty.json": "8668bb99732dde6377fa082f86edde2a0993e36c1748988781d9d2381d8b8899",
+    "data/letters/kwame_letter_1_cardiology.md": "8887e2b71a2ccff6e91649d28745c52bd0099eea9347fa2aa7b2ed18d3833bf1",
+    "data/letters/kwame_letter_1_cardiology.json": "b60585ab36e3162b2ec1556e026467a7d2a6f28bf0a1a560ed0fede8fc7db46b",
+    "data/letters/kwame_letter_2_renal_titration.md": "ca547b07ead2d7a8b50085bd249787a800ae07984cbb06a4cd04b3202ee6695a",
+    "data/letters/kwame_letter_2_renal_titration.json": "e55df85bf6586b4dece234b042f27bfc273e142a4064dbb696df35e42f9db14a",
+    "data/letters/kwame_letter_3_ambulatory_frailty.md": "887eb6d4b0ae24061c4301e98599ae22b462a87f350d35af3c45dffd7f3ee96b",
+    "data/letters/kwame_letter_3_ambulatory_frailty.json": "448e53f50f92ad8b66e88c85e139564e1b780399014946bc0dc4edcdc0159248",
     "data/dictionary/lay_drug_dictionary.json": "9243d435d264b3630c061479a14a2e3abdf3cce64b3e8c51ec61905d80026c3c",
-    "data/eval/teach_back_gold_dataset.json": "36ffa073999d6dedbec9c2c4f95c379ad626222d4c493e16c7cda53b089b29b0",
-    "data/eval/teach_back_gold_dataset.csv": "fed01c31ec5f0cb0fc2582cea4ed90725b01d8b30c4a8b9b7d929426e7b1c781"
+    "data/eval/teach_back_gold_dataset.json": "42e616746d62c0ab727b535edf86da8d6ec9257b00b02ced10b7ff9f8b2318a5",
+    "data/eval/teach_back_gold_dataset.csv": "bf2e5a44cd7600b4638311fd82b6e6870d5168e5f83ba30cd595f8977ce6207b"
   }
 }

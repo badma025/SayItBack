@@ -3,15 +3,15 @@
   "patient_name": "Kwame Mensah",
   "dob": "1945-03-14",
   "age": 81,
-  "nhs_number": "482 910 3341",
+  "nhs_number": "999 000 0001",
   "carer": {
     "name": "Efua Mensah",
     "relationship": "Daughter & Primary Carer",
     "phone": "07700 900123"
   },
-  "trust": "Guy's and St Thomas' NHS Foundation Trust",
-  "hospital": "St Thomas' Hospital",
-  "ward": "Albert Ward (Cardiology & Acute Frailty)",
+  "trust": "Thamesbank Hospitals Trust (fictional)",
+  "hospital": "Thamesbank General Hospital",
+  "ward": "Elm Ward (Cardiology & Acute Frailty)",
   "admission_date": "2026-09-28",
   "discharge_date": "2026-10-04",
   "primary_diagnosis": {
@@ -78,16 +78,16 @@
     "verbatim_quote": "A sudden weight increase of 2 kg (4.4 lbs) or more over 2 consecutive days, or 2.5 kg over one week"
   },
   "who_to_call": {
-    "primary_urgent_service": "St Thomas' Community Heart Failure Nurse Specialist Team",
-    "primary_urgent_phone": "020 7188 5678",
+    "primary_urgent_service": "Thamesbank Community Heart Failure Nurse Specialist Team",
+    "primary_urgent_phone": "020 7946 0678",
     "operating_hours": "Monday to Friday, 09:00 to 17:00",
     "out_of_hours": "NHS 111",
     "life_threatening_emergency": "999",
-    "verbatim_quote": "PRIMARY URGENT CONTACT (Specialist Team): Service: St Thomas' Community Heart Failure Nurse Specialist Team Direct Telephone Number: 020 7188 5678"
+    "verbatim_quote": "PRIMARY URGENT CONTACT (Specialist Team): Service: Thamesbank Community Heart Failure Nurse Specialist Team Direct Telephone Number: 020 7946 0678"
   },
   "follow_up_appointment": {
     "clinic_name": "Cardiology Specialist Outpatient Suite 3",
-    "location": "St Thomas' Hospital, 3rd Floor Lambeth Wing",
+    "location": "Thamesbank General Hospital, 3rd Floor River Wing",
     "date_time": "Tuesday 20 October 2026 at 10:30 AM",
     "timeframe": "2 weeks",
     "seen_by": "Dr Simon Hughes (Consultant Cardiologist) & Heart Failure Nurse Specialist",

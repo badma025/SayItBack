@@ -13,7 +13,7 @@
 
 ## The Persona & The Critical Moment
 
-**Kwame, 81**, is being discharged from Albert Ward (Cardiology & Acute Frailty) at St Thomas' Hospital after an admission for acute decompensated heart failure. His furosemide ("water tablet") has been **increased from 40 mg to 80 mg once daily in the morning** to prevent fluid re-accumulation.
+**Kwame, 81**, is being discharged from Elm Ward (Cardiology & Acute Frailty) at Thamesbank General Hospital after an admission for acute decompensated heart failure. His furosemide ("water tablet") has been **increased from 40 mg to 80 mg once daily in the morning** to prevent fluid re-accumulation.
 
 His daughter **Efua, 45**, is his primary carer. She holds her phone at the bedside before they leave the ward to explain Kwame's discharge instructions back to the app.
 
@@ -68,16 +68,16 @@ flowchart TD
 
 ## 60-Second Judge Quickstart (No Login, No Keys Required)
 
-The live deployment requires zero login, zero credit cards, and zero API keys:
+No login and no API keys are needed:
 
-1. Open the live link on desktop, tablet, or phone.
-2. Under **Judge 1-Click Test Scenarios**, click:
-   - **`1. The 15s Wow Moment`**: Demonstrates the conflicted dose detection.
-   - **`2. Second Pass`**: Demonstrates the closed-loop resolution.
-   - **`3. Comprehensive Carer Teach-Back`**: All slots confirmed with confetti.
-   - **`4. Safety Guardrail`**: Carer asks about ibuprofen; routes directly to pharmacist.
-3. Switch tabs on the left to see the **Original PDF (pdf.js)** rendered live on canvas.
-4. Click **Print Receipt** to see the high-contrast large-print fridge sheet and nurse sign-off block.
+1. Open the app on desktop, tablet or phone.
+2. Under **Try an example**, click:
+   - **Gets the dose wrong**: "how often" is marked correct and the dose change is marked red beside the exact line in the letter.
+   - **Corrects it**: the second attempt, after hearing the letter's own words.
+   - **Carer covers everything**: medicine, warning sign, who to call and follow-up.
+   - **Asks for advice**: the ibuprofen question is not answered; it goes to the pharmacist list.
+3. Switch the letter to **Original PDF** to see the PDF whose text the checks use.
+4. Click **Open the handover receipt** for the large-print receipt and nurse sign-off.
 
 ---
 

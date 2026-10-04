@@ -3,14 +3,14 @@
   "patient_name": "Kwame Mensah",
   "dob": "1945-03-14",
   "age": 81,
-  "nhs_number": "482 910 3341",
+  "nhs_number": "999 000 0001",
   "carer": {
     "name": "Efua Mensah",
     "relationship": "Daughter & Primary Carer",
     "phone": "07700 900123"
   },
-  "trust": "Guy's and St Thomas' NHS Foundation Trust",
-  "hospital": "St Thomas' Hospital",
+  "trust": "Thamesbank Hospitals Trust (fictional)",
+  "hospital": "Thamesbank General Hospital",
   "ward": "Hillyers Ward (Cardiology Step-Down & Complex Heart Failure Unit)",
   "admission_date": "2026-10-12",
   "discharge_date": "2026-10-16",
@@ -90,16 +90,16 @@
     "verbatim_quote": "Weight increase of 2 kg or more in 2 days, or returning ankle swelling"
   },
   "who_to_call": {
-    "primary_urgent_service": "St Thomas' Heart Failure Rapid Access Nurse Clinic",
-    "primary_urgent_phone": "020 7188 5680",
+    "primary_urgent_service": "Thamesbank Heart Failure Rapid Access Nurse Clinic",
+    "primary_urgent_phone": "020 7946 0680",
     "operating_hours": "Monday to Friday, 08:30 to 16:30",
     "out_of_hours": "NHS 111",
     "life_threatening_emergency": "999",
-    "verbatim_quote": "PRIMARY URGENT CONTACT (Specialist Team): Service: St Thomas' Heart Failure Rapid Access Nurse Clinic Direct Telephone Number: 020 7188 5680"
+    "verbatim_quote": "PRIMARY URGENT CONTACT (Specialist Team): Service: Thamesbank Heart Failure Rapid Access Nurse Clinic Direct Telephone Number: 020 7946 0680"
   },
   "follow_up_appointment": {
-    "clinic_name": "Lambeth Wing Heart Failure Clinic, Suite 2",
-    "location": "St Thomas' Hospital",
+    "clinic_name": "River Wing Heart Failure Clinic, Suite 2",
+    "location": "Thamesbank General Hospital",
     "date_time": "Thursday 29 October 2026 at 14:00",
     "timeframe": "3 weeks",
     "seen_by": "Clinical Nurse Specialist Team",
