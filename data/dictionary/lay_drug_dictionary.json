@@ -1,0 +1,189 @@
+{
+  "furosemide": {
+    "generic_name": "furosemide",
+    "drug_class": "loop_diuretic",
+    "lay_terms": [
+      "water tablet",
+      "water tablets",
+      "water pill",
+      "water pills",
+      "fluid tablet",
+      "fluid pill",
+      "pee pill",
+      "urine pill"
+    ],
+    "brand_names": ["Lasix", "Frusid"],
+    "common_misspellings_and_asr": [
+      "frusemide",
+      "fruit semi",
+      "fruit semide",
+      "frosemide",
+      "furosemid",
+      "furosemida",
+      "fusimide",
+      "few rosemide"
+    ],
+    "standard_timing": "morning",
+    "why_morning": "to prevent nocturia and sleep disturbance"
+  },
+  "bumetanide": {
+    "generic_name": "bumetanide",
+    "drug_class": "loop_diuretic",
+    "lay_terms": [
+      "strong water tablet",
+      "stronger water tablet",
+      "water tablet",
+      "water pill",
+      "fluid pill"
+    ],
+    "brand_names": ["Burinex"],
+    "common_misspellings_and_asr": [
+      "bumetamide",
+      "burinex",
+      "bumetanid"
+    ],
+    "standard_timing": "morning",
+    "why_morning": "to prevent nocturia"
+  },
+  "bisoprolol": {
+    "generic_name": "bisoprolol",
+    "drug_class": "beta_blocker",
+    "lay_terms": [
+      "beta blocker",
+      "beta-blocker",
+      "heart slow down tablet",
+      "heart rate tablet",
+      "pulse tablet",
+      "blood pressure tablet"
+    ],
+    "brand_names": ["Cardicor", "Congescor"],
+    "common_misspellings_and_asr": [
+      "bisopralol",
+      "bisoprol",
+      "biso",
+      "by soprolol"
+    ],
+    "standard_timing": "morning"
+  },
+  "ramipril": {
+    "generic_name": "ramipril",
+    "drug_class": "ace_inhibitor",
+    "lay_terms": [
+      "blood pressure tablet",
+      "BP tablet",
+      "heart protection pill",
+      "ACE inhibitor",
+      "kidney protector"
+    ],
+    "brand_names": ["Tritace"],
+    "common_misspellings_and_asr": [
+      "ramiprile",
+      "rampril",
+      "rami pril"
+    ],
+    "standard_timing": "morning"
+  },
+  "dapagliflozin": {
+    "generic_name": "dapagliflozin",
+    "drug_class": "sglt2_inhibitor",
+    "lay_terms": [
+      "sugar and heart tablet",
+      "kidney and heart protector",
+      "sugar flusher",
+      "new heart tablet",
+      "forxiga"
+    ],
+    "brand_names": ["Forxiga"],
+    "common_misspellings_and_asr": [
+      "dapa",
+      "dapagliflozen",
+      "dapa gli flozin",
+      "forxiga",
+      "foxiga"
+    ],
+    "standard_timing": "morning"
+  },
+  "sacubitril_valsartan": {
+    "generic_name": "sacubitril / valsartan",
+    "drug_class": "arni",
+    "lay_terms": [
+      "entresto",
+      "combo heart tablet",
+      "new heart tablet",
+      "double action heart pill"
+    ],
+    "brand_names": ["Entresto"],
+    "common_misspellings_and_asr": [
+      "entresto",
+      "sacubitril",
+      "valsartan"
+    ],
+    "standard_timing": "twice_daily"
+  },
+  "spironolactone": {
+    "generic_name": "spironolactone",
+    "drug_class": "mra_aldosterone_antagonist",
+    "lay_terms": [
+      "water tablet helper",
+      "potassium sparing water pill",
+      "spiro"
+    ],
+    "brand_names": ["Aldactone"],
+    "common_misspellings_and_asr": [
+      "spiro",
+      "spironolacton"
+    ],
+    "standard_timing": "morning"
+  },
+  "atorvastatin": {
+    "generic_name": "atorvastatin",
+    "drug_class": "statin",
+    "lay_terms": [
+      "statin",
+      "cholesterol tablet",
+      "cholesterol pill",
+      "lipid tablet"
+    ],
+    "brand_names": ["Lipitor"],
+    "common_misspellings_and_asr": [
+      "atorva",
+      "atorvastatine",
+      "lipitor"
+    ],
+    "standard_timing": "night"
+  },
+  "paracetamol": {
+    "generic_name": "paracetamol",
+    "drug_class": "analgesic",
+    "lay_terms": [
+      "painkiller",
+      "pain relief",
+      "pain tablet",
+      "panadol"
+    ],
+    "brand_names": ["Panadol", "Calpol"],
+    "common_misspellings_and_asr": [
+      "paracetemol",
+      "para cetamol"
+    ],
+    "standard_timing": "as_needed"
+  },
+  "ibuprofen": {
+    "generic_name": "ibuprofen",
+    "drug_class": "nsaid",
+    "lay_terms": [
+      "anti-inflammatory",
+      "brufen",
+      "nurofen",
+      "advil",
+      "arthritis pill"
+    ],
+    "brand_names": ["Nurofen", "Brufen", "Advil"],
+    "common_misspellings_and_asr": [
+      "ibrufen",
+      "nurofen"
+    ],
+    "contraindicated_in_hf": true,
+    "advice_warning": "CONTRAINDICATED in heart failure and with diuretics / renal impairment. Triggers fluid retention, worsening heart failure, and acute kidney injury. Must route to pharmacist questions."
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "letter_id": "kwame_letter_3_ambulatory_frailty",
+  "patient_name": "Kwame Mensah",
+  "dob": "1945-03-14",
+  "age": 81,
+  "nhs_number": "482 910 3341",
+  "carer": {
+    "name": "Efua Mensah",
+    "relationship": "Daughter & Primary Carer",
+    "phone": "07700 900123"
+  },
+  "trust": "Guy's and St Thomas' NHS Foundation Trust",
+  "hospital": "St Thomas' Hospital",
+  "ward": "Same Day Emergency Care (SDEC) & Ambulatory Frailty Unit",
+  "admission_date": "2026-11-02",
+  "discharge_date": "2026-11-02",
+  "primary_diagnosis": {
+    "clinical_name": "Chronic heart failure with reduced ejection fraction with diuretic resistance, successfully stepped down to oral bumetanide",
+    "plain_language": "Heart failure with switch to a stronger water tablet",
+    "verbatim_quote": "Chronic heart failure with reduced ejection fraction with diuretic resistance, successfully stepped down to oral bumetanide"
+  },
+  "must_know_medicine_changes": [
+    {
+      "drug": "bumetanide",
+      "lay_name": "strong water tablet / fluid pill",
+      "direction": "started",
+      "previous_dose": "furosemide 80 mg daily",
+      "dose": "2 mg",
+      "frequency": "once daily in the morning",
+      "route": "oral",
+      "clinical_rationale": "SWITCHED from oral furosemide 80 mg to oral bumetanide 2 mg daily. Bumetanide has nearly 100% oral absorption",
+      "verbatim_quote": "Bumetanide 2 mg oral tablets (Brand: Burinex) ... Direction of Change: SWITCHED / NEW DIURETIC REGIMEN ... New Discharge Dose: 2 mg (take TWO 1 mg tablets) ONCE daily in the morning",
+      "safety_critical": true
+    },
+    {
+      "drug": "furosemide",
+      "lay_name": "water tablet",
+      "direction": "stopped",
+      "previous_dose": "80 mg once daily",
+      "dose": "0 mg (permanently discontinued)",
+      "frequency": "discontinued",
+      "route": "oral",
+      "clinical_rationale": "STOPPED (REPLACED BY BUMETANIDE). Do NOT take both furosemide and bumetanide together.",
+      "verbatim_quote": "Oral Furosemide 80 mg tablets ... Direction: STOPPED (REPLACED BY BUMETANIDE)",
+      "safety_critical": true
+    },
+    {
+      "drug": "ferric derisomaltose",
+      "lay_name": "iron infusion",
+      "direction": "completed_inpatient",
+      "dose": "1000 mg",
+      "frequency": "single infusion",
+      "route": "intravenous",
+      "clinical_rationale": "Single IV iron infusion completed in SDEC. Oral iron stopped.",
+      "verbatim_quote": "Ferric derisomaltose 1,000 mg IV infusion (Brand: Monofer) ... Direction: COMPLETED IN SDEC ... Dose: 1,000 mg single infusion administered 02/11/2026",
+      "safety_critical": false
+    }
+  ],
+  "unchanged_medicines": [
+    {
+      "drug": "dapagliflozin",
+      "lay_name": "heart and kidney protector tablet",
+      "direction": "unchanged",
+      "dose": "10 mg",
+      "frequency": "once daily in the morning",
+      "verbatim_quote": "Dapagliflozin 10 mg oral tablets ... Direction: UNCHANGED ... Discharge Dose: 10 mg ONCE daily in the morning"
+    },
+    {
+      "drug": "bisoprolol",
+      "lay_name": "beta-blocker",
+      "direction": "unchanged",
+      "dose": "2.5 mg",
+      "frequency": "once daily in the morning",
+      "verbatim_quote": "Bisoprolol 2.5 mg oral tablets ... Direction: UNCHANGED ... Discharge Dose: 2.5 mg ONCE daily in the morning"
+    },
+    {
+      "drug": "atorvastatin",
+      "lay_name": "statin",
+      "direction": "unchanged",
+      "dose": "20 mg",
+      "frequency": "once daily at night",
+      "verbatim_quote": "Atorvastatin 20 mg oral tablets ... Direction: UNCHANGED ... Discharge Dose: 20 mg ONCE daily at night"
+    },
+    {
+      "drug": "paracetamol",
+      "lay_name": "painkiller",
+      "direction": "unchanged",
+      "dose": "500 mg to 1,000 mg",
+      "frequency": "PRN",
+      "verbatim_quote": "Paracetamol 500 mg oral tablets ... Direction: UNCHANGED ... Discharge Dose: 500 mg to 1,000 mg PRN for knee pain"
+    }
+  ],
+  "red_flag_symptoms": {
+    "weight_gain_threshold": "1.5 kg (3.3 lbs) or more over 2 consecutive mornings",
+    "symptoms": [
+      "Weight increase of 1.5 kg or more over 2 consecutive mornings",
+      "Significant dizziness upon standing or feeling unsteady",
+      "New breathlessness waking him at night or at rest"
+    ],
+    "verbatim_quote": "Weight increase of 1.5 kg (3.3 lbs) or more over 2 consecutive mornings"
+  },
+  "who_to_call": {
+    "primary_urgent_service": "St Thomas' Hospital Virtual Ward & Ambulatory Frailty Hotline",
+    "primary_urgent_phone": "020 7188 9012",
+    "operating_hours": "7 days a week, 08:00 to 20:00",
+    "out_of_hours": "NHS 111",
+    "life_threatening_emergency": "999",
+    "verbatim_quote": "PRIMARY URGENT CONTACT (Virtual Ward & SDEC Team): Service: St Thomas' Hospital Virtual Ward & Ambulatory Frailty Hotline Direct Telephone Number: 020 7188 9012"
+  },
+  "follow_up_appointment": {
+    "clinic_name": "Guy's Hospital / St Thomas' SDEC Suite, Ground Floor",
+    "location": "Guy's Hospital / St Thomas' SDEC Suite",
+    "date_time": "Monday 09 November 2026 at 11:00 AM",
+    "timeframe": "7 days",
+    "seen_by": "Dr Helen Sanderson & Virtual Ward Lead Nurse",
+    "verbatim_quote": "Monday 09 November 2026 at 11:00 AM (in 7 days)"
+  },
+  "gp_actions": {
+    "action": "Add Bumetanide 2 mg once daily in morning to repeat list, cancel Furosemide, arrange FBC, ferritin, U&E in 4 weeks (around 30/11/2026)",
+    "verbatim_quote": "Add Bumetanide 1 mg tablets (dose: 2 mg once daily in morning) to repeat prescription. Inactivate / cancel Furosemide repeat template."
+  }
+}
