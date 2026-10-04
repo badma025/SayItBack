@@ -13,7 +13,7 @@
 
 ## The Persona & The Critical Moment
 
-**Kwame, 81**, is being discharged from Albert Ward (Cardiology & Acute Frailty) at St Thomas' Hospital after an admission for acute decompensated heart failure. His furosemide ("water tablet") has been **increased from 40 mg to 80 mg once daily in the morning** to prevent fluid re-accumulation.
+**Kwame, 81**, is being discharged from Elm Ward (Cardiology & Acute Frailty) at Thamesbank General Hospital after an admission for acute decompensated heart failure. His furosemide ("water tablet") has been **increased from 40 mg to 80 mg once daily in the morning** to prevent fluid re-accumulation.
 
 His daughter **Efua, 45**, is his primary carer. She holds her phone at the bedside before they leave the ward to explain Kwame's discharge instructions back to the app.
 

@@ -29,7 +29,7 @@ export function JudgesTourModal({ isOpen, onClose }: JudgesTourModalProps) {
               Say It Back: 60-Second Judge Tour
             </h2>
             <p className="text-xs text-blue-100 mt-0.5">
-              Kwame (81) &amp; Efua (45) at St Thomas&apos; Hospital bedside
+              Kwame (81) &amp; Efua (45) at Thamesbank General Hospital bedside
             </p>
           </div>
           <button

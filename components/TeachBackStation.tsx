@@ -48,7 +48,7 @@ export const JUDGE_SCENARIOS = [
     id: "full_carer",
     title: "3. Comprehensive Carer Teach-Back",
     badge: "All Slots",
-    text: "Kwame takes furosemide 80mg every morning. If his weight jumps 2kg we ring 020 7188 5678, and we have a cardiology clinic in two weeks.",
+    text: "Kwame takes furosemide 80mg every morning. If his weight jumps 2kg we ring 020 7946 0678, and we have a cardiology clinic in two weeks.",
     note: "Covers medication change, red flag threshold, nurse contact, and follow-up appointment.",
   },
   {

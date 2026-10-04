@@ -1,12 +1,12 @@
-# GUY'S AND ST THOMAS' NHS FOUNDATION TRUST
-## St Thomas' Hospital · Westminster Bridge Road, London SE1 7EH
+# THAMESBANK HOSPITALS TRUST (FICTIONAL)
+## Thamesbank General Hospital · Riverside Road, London
 ### AMBULATORY SDEC & VIRTUAL WARD DISCHARGE SUMMARY
 
 ---
 
 ### 1. PATIENT DEMOGRAPHICS & IDENTIFIERS
 - **Patient Name:** MENSAH, Kwame
-- **NHS Number:** 482 910 3341
+- **NHS Number:** 999 000 0001
 - **Hospital Number (MRN):** TH-882914
 - **Date of Birth:** 14/03/1945 (Age: 81 years)
 - **Gender:** Male
@@ -24,13 +24,13 @@
 ---
 
 ### 2. ENCOUNTER & DISCHARGE DETAILS
-- **Hospital / Location:** St Thomas' Hospital
+- **Hospital / Location:** Thamesbank General Hospital
 - **Service / Unit:** Same Day Emergency Care (SDEC) & Ambulatory Frailty Unit
 - **Admission Date & Time:** 02/11/2026 08:45
 - **Discharge Date & Time:** 02/11/2026 18:15 (Same Day Transfer to Heart Failure Virtual Ward)
 - **Admission Method:** Emergency Referral from Community Heart Failure Nurse
-- **Discharging Consultant:** Dr Helen Sanderson, Consultant Geriatrician & Frailty Lead (GMC: 5192837)
-- **Discharging Clinician:** Dr Daniel O'Connell, SDEC Ambulatory Care Registrar (GMC: 7629104)
+- **Discharging Consultant:** Dr Helen Sanderson, Consultant Geriatrician & Frailty Lead
+- **Discharging Clinician:** Dr Daniel O'Connell, SDEC Ambulatory Care Registrar
 - **Discharge Destination:** Home under Step-Down Virtual Ward Remote Monitoring
 
 ---
@@ -40,7 +40,7 @@
 - **Clinical Summary:**  
   Kwame was referred directly to SDEC by his community nurse to avoid an overnight hospital admission. Clinical evaluation showed mild fluid retention with blunted oral furosemide absorption secondary to subclinical bowel wall oedema. Renal parameters were acceptable (Creatinine 124 µmol/L, eGFR 50 mL/min/1.73m², K+ 4.5 mmol/L). 
   
-  During his day-case stay, Kwame received IV bumetanide 2 mg with excellent diuretic response (1.8 L diuresis over 5 hours). To ensure reliable long-term bioavailability, his oral loop diuretic was **switched from Furosemide 80 mg daily to Bumetanide 2 mg once daily in the morning**. In addition, he was infused with Ferric derisomaltose (Monofer) 1,000 mg IV over 45 minutes for iron deficiency in heart failure, without adverse reaction. Oral iron supplements were stopped. Kwame is being discharged home under the St Thomas' Heart Failure Virtual Ward with daily remote biometric monitoring.
+  During his day-case stay, Kwame received IV bumetanide 2 mg with excellent diuretic response (1.8 L diuresis over 5 hours). To ensure reliable long-term bioavailability, his oral loop diuretic was **switched from Furosemide 80 mg daily to Bumetanide 2 mg once daily in the morning**. In addition, he was infused with Ferric derisomaltose (Monofer) 1,000 mg IV over 45 minutes for iron deficiency in heart failure, without adverse reaction. Oral iron supplements were stopped. Kwame is being discharged home under the Thamesbank Heart Failure Virtual Ward with daily remote biometric monitoring.
 - **Discharge Vitals:** BP 116/70 mmHg, Heart Rate 66 bpm, SpO2 98% room air, Weight 73.9 kg.
 
 ---
@@ -118,7 +118,7 @@
   - He must take **two 1 mg tablets together once every morning**.
   - Warned that taking old furosemide alongside bumetanide would cause dangerous dehydration and kidney damage.
 - **Virtual Ward Remote Weight Protocol:**
-  - Provided with a Bluetooth smart weight scale linked to the St Thomas' Virtual Ward hub.
+  - Provided with a Bluetooth smart weight scale linked to the Thamesbank Virtual Ward hub.
   - Weigh each morning immediately after morning urination, before breakfast.
 
 ---
@@ -133,8 +133,8 @@ If Kwame or Efua notes:
 
 #### Contact Details:
 - **PRIMARY URGENT CONTACT (Virtual Ward & SDEC Team):**
-  - **Service:** St Thomas' Hospital Virtual Ward & Ambulatory Frailty Hotline
-  - **Direct Telephone Number:** **020 7188 9012**
+  - **Service:** Thamesbank General Hospital Virtual Ward & Ambulatory Frailty Hotline
+  - **Direct Telephone Number:** **020 7946 0012**
   - **Hours:** 7 days a week, 08:00 to 20:00
   - **Action:** Call directly if weight spikes by 1.5 kg or if feeling unwell; a doctor or specialist nurse will review within 2 hours.
 - **OUT OF HOURS (20:00 - 08:00):**
@@ -146,7 +146,7 @@ If Kwame or Efua notes:
 
 ### 10. FOLLOW-UP APPOINTMENTS & PLANNED CARE
 1. **Ambulatory Frailty SDEC Review Clinic:**
-   - **Location:** Guy's Hospital / St Thomas' SDEC Suite, Ground Floor
+   - **Location:** Thamesbank General Hospital SDEC Suite, Ground Floor
    - **Date & Time:** **Monday 09 November 2026 at 11:00 AM** (in 7 days)
    - **Seen by:** Dr Helen Sanderson & Virtual Ward Lead Nurse
 2. **Virtual Ward Remote Daily Monitoring:**
@@ -155,7 +155,7 @@ If Kwame or Efua notes:
 ---
 
 ### 11. CLINICAL SIGN-OFF
-- **Discharging Doctor:** Dr Daniel O'Connell, MB BCh BAO MRCP (GMC 7629104)  
+- **Discharging Doctor:** Dr Daniel O'Connell, MB BCh BAO MRCP  
   Signature: *D. O'Connell* · Date: 02/11/2026
 - **Lead Pharmacist:** K. Reynolds, MPharm (GPhC 2091448)  
   Signature: *K. Reynolds* · Date: 02/11/2026

@@ -62,14 +62,14 @@ async function generatePdf() {
     height: 44,
     color: nhsBlue,
   });
-  page1.drawText("GUY'S AND ST THOMAS' NHS FOUNDATION TRUST", {
+  page1.drawText("THAMESBANK HOSPITALS TRUST (FICTIONAL)", {
     x: 52,
     y: 796,
     size: 13,
     font: fontBold,
     color: rgb(1, 1, 1),
   });
-  page1.drawText("St Thomas' Hospital · Westminster Bridge Road, London SE1 7EH", {
+  page1.drawText("Thamesbank General Hospital · Riverside Road, London", {
     x: 52,
     y: 780,
     size: 9,

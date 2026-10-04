@@ -5,8 +5,8 @@
     "speaker": "Kwame Mensah (81, patient)",
     "target_item": "holistic_full_summary",
     "perturbation_type": "GOLD_CORRECT",
-    "base_correct_transcript": "My heart was overloaded with fluid because of that chest infection. The main change is my water tablet, furosemide, they increased it from 40 up to 80 milligrams, one tablet every morning. If my weight jumps up by 2 kilos over two days or I get breathless lying down, I have to call the heart failure nurse team on 020 7188 5678 straight away. And I go back to clinic in two weeks on the 20th of October.",
-    "perturbed_transcript": "My heart was overloaded with fluid because of that chest infection. The main change is my water tablet, furosemide, they increased it from 40 up to 80 milligrams, one tablet every morning. If my weight jumps up by 2 kilos over two days or I get breathless lying down, I have to call the heart failure nurse team on 020 7188 5678 straight away. And I go back to clinic in two weeks on the 20th of October.",
+    "base_correct_transcript": "My heart was overloaded with fluid because of that chest infection. The main change is my water tablet, furosemide, they increased it from 40 up to 80 milligrams, one tablet every morning. If my weight jumps up by 2 kilos over two days or I get breathless lying down, I have to call the heart failure nurse team on 020 7946 0678 straight away. And I go back to clinic in two weeks on the 20th of October.",
+    "perturbed_transcript": "My heart was overloaded with fluid because of that chest infection. The main change is my water tablet, furosemide, they increased it from 40 up to 80 milligrams, one tablet every morning. If my weight jumps up by 2 kilos over two days or I get breathless lying down, I have to call the heart failure nurse team on 020 7946 0678 straight away. And I go back to clinic in two weeks on the 20th of October.",
     "expected_slots": {
       "drug": "furosemide",
       "lay_name": "water tablet",
@@ -14,7 +14,7 @@
       "dose": "80 mg",
       "frequency": "once daily in the morning",
       "weight_threshold": "2 kg in 2 days",
-      "who_to_call": "heart failure nurse team 020 7188 5678",
+      "who_to_call": "heart failure nurse team 020 7946 0678",
       "follow_up": "2 weeks (20 October)"
     },
     "extracted_slots_ground_truth": {
@@ -24,7 +24,7 @@
       "dose": "80 mg",
       "frequency": "once daily in the morning",
       "weight_threshold": "2 kg in 2 days",
-      "who_to_call": "heart failure nurse team 020 7188 5678",
+      "who_to_call": "heart failure nurse team 020 7946 0678",
       "follow_up": "2 weeks (20 October)"
     },
     "verbatim_evidence_spans": [
@@ -32,7 +32,7 @@
       "increased it from 40 up to 80 milligrams",
       "one tablet every morning",
       "weight jumps up by 2 kilos over two days",
-      "heart failure nurse team on 020 7188 5678",
+      "heart failure nurse team on 020 7946 0678",
       "clinic in two weeks on the 20th of October"
     ],
     "labeller_1_grade": "confirmed",
@@ -120,8 +120,8 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "holistic_full_summary",
     "perturbation_type": "GOLD_CORRECT",
-    "base_correct_transcript": "So dad was in with heart failure flare-up and fluid on his lungs. His furosemide water tablet is increased to 80 mg once a day in the morning. All his other pills stay the same. I'll weigh him every single morning before breakfast. If he gains 2 kilos over two days or gets short of breath, I will ring the heart failure nurse team on 020 7188 5678. He has clinic on October 20th and GP bloods in 7 to 10 days.",
-    "perturbed_transcript": "So dad was in with heart failure flare-up and fluid on his lungs. His furosemide water tablet is increased to 80 mg once a day in the morning. All his other pills stay the same. I'll weigh him every single morning before breakfast. If he gains 2 kilos over two days or gets short of breath, I will ring the heart failure nurse team on 020 7188 5678. He has clinic on October 20th and GP bloods in 7 to 10 days.",
+    "base_correct_transcript": "So dad was in with heart failure flare-up and fluid on his lungs. His furosemide water tablet is increased to 80 mg once a day in the morning. All his other pills stay the same. I'll weigh him every single morning before breakfast. If he gains 2 kilos over two days or gets short of breath, I will ring the heart failure nurse team on 020 7946 0678. He has clinic on October 20th and GP bloods in 7 to 10 days.",
+    "perturbed_transcript": "So dad was in with heart failure flare-up and fluid on his lungs. His furosemide water tablet is increased to 80 mg once a day in the morning. All his other pills stay the same. I'll weigh him every single morning before breakfast. If he gains 2 kilos over two days or gets short of breath, I will ring the heart failure nurse team on 020 7946 0678. He has clinic on October 20th and GP bloods in 7 to 10 days.",
     "expected_slots": {
       "drug": "furosemide",
       "lay_name": "water tablet",
@@ -129,7 +129,7 @@
       "dose": "80 mg",
       "frequency": "once a day in the morning",
       "weight_threshold": "2 kg in 2 days",
-      "who_to_call": "heart failure nurse team 020 7188 5678",
+      "who_to_call": "heart failure nurse team 020 7946 0678",
       "follow_up": "October 20th"
     },
     "extracted_slots_ground_truth": {
@@ -139,7 +139,7 @@
       "dose": "80 mg",
       "frequency": "once a day in the morning",
       "weight_threshold": "2 kg in 2 days",
-      "who_to_call": "heart failure nurse team 020 7188 5678",
+      "who_to_call": "heart failure nurse team 020 7946 0678",
       "follow_up": "October 20th"
     },
     "verbatim_evidence_spans": [
@@ -148,7 +148,7 @@
       "once a day in the morning",
       "weigh him every single morning before breakfast",
       "gains 2 kilos over two days",
-      "heart failure nurse team on 020 7188 5678",
+      "heart failure nurse team on 020 7946 0678",
       "clinic on October 20th"
     ],
     "labeller_1_grade": "confirmed",
@@ -393,10 +393,10 @@
     "speaker": "Kwame Mensah (81, patient)",
     "target_item": "who_to_call",
     "perturbation_type": "PERTURBATION_WHO_TO_CALL_WRONG",
-    "base_correct_transcript": "If my breath gets bad, I ring the St Thomas' heart nurse team on 020 7188 5678.",
+    "base_correct_transcript": "If my breath gets bad, I ring the Thamesbank heart nurse team on 020 7946 0678.",
     "perturbed_transcript": "If I get breathless, I will telephone my cousin in Manchester to see what she says.",
     "expected_slots": {
-      "who_to_call": "heart failure specialist nurse team (020 7188 5678)",
+      "who_to_call": "heart failure specialist nurse team (020 7946 0678)",
       "emergency": "999"
     },
     "extracted_slots_ground_truth": {
@@ -419,10 +419,10 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "who_to_call",
     "perturbation_type": "PERTURBATION_WHO_TO_CALL_WRONG",
-    "base_correct_transcript": "If dad gains 2kg in 2 days, I call the heart failure nurse team on 020 7188 5678.",
+    "base_correct_transcript": "If dad gains 2kg in 2 days, I call the heart failure nurse team on 020 7946 0678.",
     "perturbed_transcript": "If dad's weight shoots up, I'll book a routine GP appointment for the following week.",
     "expected_slots": {
-      "who_to_call": "St Thomas' Heart Failure Nurse Specialist Team 020 7188 5678",
+      "who_to_call": "Thamesbank Heart Failure Nurse Specialist Team 020 7946 0678",
       "action": "call immediately"
     },
     "extracted_slots_ground_truth": {
@@ -770,14 +770,14 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "holistic_full_summary",
     "perturbation_type": "GOLD_CORRECT",
-    "base_correct_transcript": "Dad is starting a new heart pill called Dapagliflozin, 10 milligrams once a day in the morning. And Ramipril is completely stopped because of his dry cough, so I will take all old Ramipril boxes back to the chemist. Furosemide stays at 80 mg in the morning. If his weight goes up by 2 kg in 2 days or he gets dizzy, we call the Heart Failure Clinic on 020 7188 5680. He has clinic on October 29th and GP bloods in two weeks.",
-    "perturbed_transcript": "Dad is starting a new heart pill called Dapagliflozin, 10 milligrams once a day in the morning. And Ramipril is completely stopped because of his dry cough, so I will take all old Ramipril boxes back to the chemist. Furosemide stays at 80 mg in the morning. If his weight goes up by 2 kg in 2 days or he gets dizzy, we call the Heart Failure Clinic on 020 7188 5680. He has clinic on October 29th and GP bloods in two weeks.",
+    "base_correct_transcript": "Dad is starting a new heart pill called Dapagliflozin, 10 milligrams once a day in the morning. And Ramipril is completely stopped because of his dry cough, so I will take all old Ramipril boxes back to the chemist. Furosemide stays at 80 mg in the morning. If his weight goes up by 2 kg in 2 days or he gets dizzy, we call the Heart Failure Clinic on 020 7946 0680. He has clinic on October 29th and GP bloods in two weeks.",
+    "perturbed_transcript": "Dad is starting a new heart pill called Dapagliflozin, 10 milligrams once a day in the morning. And Ramipril is completely stopped because of his dry cough, so I will take all old Ramipril boxes back to the chemist. Furosemide stays at 80 mg in the morning. If his weight goes up by 2 kg in 2 days or he gets dizzy, we call the Heart Failure Clinic on 020 7946 0680. He has clinic on October 29th and GP bloods in two weeks.",
     "expected_slots": {
       "drug_1": "dapagliflozin (started 10mg morning)",
       "drug_2": "ramipril (stopped, dry cough)",
       "drug_3": "furosemide (unchanged 80mg morning)",
       "red_flags": "2 kg in 2 days or dizziness",
-      "who_to_call": "020 7188 5680",
+      "who_to_call": "020 7946 0680",
       "follow_up": "October 29th"
     },
     "extracted_slots_ground_truth": {
@@ -785,7 +785,7 @@
       "drug_2": "ramipril (stopped, dry cough)",
       "drug_3": "furosemide (unchanged 80mg morning)",
       "red_flags": "2 kg in 2 days or dizziness",
-      "who_to_call": "020 7188 5680",
+      "who_to_call": "020 7946 0680",
       "follow_up": "October 29th"
     },
     "verbatim_evidence_spans": [
@@ -794,7 +794,7 @@
       "take all old Ramipril boxes back to the chemist",
       "Furosemide stays at 80 mg in the morning",
       "weight goes up by 2 kg in 2 days",
-      "Heart Failure Clinic on 020 7188 5680",
+      "Heart Failure Clinic on 020 7946 0680",
       "clinic on October 29th"
     ],
     "labeller_1_grade": "confirmed",
@@ -936,18 +936,18 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "who_to_call",
     "perturbation_type": "GOLD_CORRECT",
-    "base_correct_transcript": "We call the Rapid Access Nurse Clinic on 020 7188 5680.",
-    "perturbed_transcript": "If he gets dizzy or gains weight, I call the Rapid Access Nurse Clinic number on the letter, 020 7188 5680.",
+    "base_correct_transcript": "We call the Rapid Access Nurse Clinic on 020 7946 0680.",
+    "perturbed_transcript": "If he gets dizzy or gains weight, I call the Rapid Access Nurse Clinic number on the letter, 020 7946 0680.",
     "expected_slots": {
-      "service": "St Thomas' Heart Failure Rapid Access Nurse Clinic",
-      "phone": "020 7188 5680"
+      "service": "Thamesbank Heart Failure Rapid Access Nurse Clinic",
+      "phone": "020 7946 0680"
     },
     "extracted_slots_ground_truth": {
       "service": "Rapid Access Nurse Clinic",
-      "phone": "020 7188 5680"
+      "phone": "020 7946 0680"
     },
     "verbatim_evidence_spans": [
-      "Rapid Access Nurse Clinic number on the letter, 020 7188 5680"
+      "Rapid Access Nurse Clinic number on the letter, 020 7946 0680"
     ],
     "labeller_1_grade": "confirmed",
     "labeller_1_rationale": "Exact match for Letter 2 clinic number.",
@@ -1019,14 +1019,14 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "holistic_full_summary",
     "perturbation_type": "GOLD_CORRECT",
-    "base_correct_transcript": "The big change is dad's water tablet is switched from furosemide to bumetanide. He takes 2 mg, which is two 1 mg tablets, once a day in the morning. He must NOT take furosemide anymore. He had his iron drip in clinic today so no more iron tablets. We weigh him on the smart scale every morning, and if his weight goes up 1.5 kg over 2 days, we ring the Virtual Ward team on 020 7188 9012. His review clinic is Monday November 9th.",
-    "perturbed_transcript": "The big change is dad's water tablet is switched from furosemide to bumetanide. He takes 2 mg, which is two 1 mg tablets, once a day in the morning. He must NOT take furosemide anymore. He had his iron drip in clinic today so no more iron tablets. We weigh him on the smart scale every morning, and if his weight goes up 1.5 kg over 2 days, we ring the Virtual Ward team on 020 7188 9012. His review clinic is Monday November 9th.",
+    "base_correct_transcript": "The big change is dad's water tablet is switched from furosemide to bumetanide. He takes 2 mg, which is two 1 mg tablets, once a day in the morning. He must NOT take furosemide anymore. He had his iron drip in clinic today so no more iron tablets. We weigh him on the smart scale every morning, and if his weight goes up 1.5 kg over 2 days, we ring the Virtual Ward team on 020 7946 0012. His review clinic is Monday November 9th.",
+    "perturbed_transcript": "The big change is dad's water tablet is switched from furosemide to bumetanide. He takes 2 mg, which is two 1 mg tablets, once a day in the morning. He must NOT take furosemide anymore. He had his iron drip in clinic today so no more iron tablets. We weigh him on the smart scale every morning, and if his weight goes up 1.5 kg over 2 days, we ring the Virtual Ward team on 020 7946 0012. His review clinic is Monday November 9th.",
     "expected_slots": {
       "drug_new": "bumetanide (2 mg morning)",
       "drug_stopped": "furosemide (permanently stopped)",
       "iron": "IV completed, oral stopped",
       "weight_threshold": "1.5 kg in 2 days",
-      "who_to_call": "020 7188 9012",
+      "who_to_call": "020 7946 0012",
       "follow_up": "Monday November 9th"
     },
     "extracted_slots_ground_truth": {
@@ -1034,7 +1034,7 @@
       "drug_stopped": "furosemide (permanently stopped)",
       "iron": "IV completed, oral stopped",
       "weight_threshold": "1.5 kg in 2 days",
-      "who_to_call": "020 7188 9012",
+      "who_to_call": "020 7946 0012",
       "follow_up": "Monday November 9th"
     },
     "verbatim_evidence_spans": [
@@ -1043,7 +1043,7 @@
       "must NOT take furosemide anymore",
       "iron drip in clinic today so no more iron tablets",
       "weight goes up 1.5 kg over 2 days",
-      "Virtual Ward team on 020 7188 9012",
+      "Virtual Ward team on 020 7946 0012",
       "review clinic is Monday November 9th"
     ],
     "labeller_1_grade": "confirmed",
@@ -1177,20 +1177,20 @@
     "speaker": "Kwame Mensah (81, patient)",
     "target_item": "who_to_call",
     "perturbation_type": "GOLD_CORRECT",
-    "base_correct_transcript": "I call 020 7188 9012.",
-    "perturbed_transcript": "The green card says call the virtual ward hotline on 020 7188 9012 between eight in the morning and eight at night.",
+    "base_correct_transcript": "I call 020 7946 0012.",
+    "perturbed_transcript": "The green card says call the virtual ward hotline on 020 7946 0012 between eight in the morning and eight at night.",
     "expected_slots": {
       "service": "Virtual Ward & Ambulatory Frailty Hotline",
-      "phone": "020 7188 9012",
+      "phone": "020 7946 0012",
       "hours": "08:00 to 20:00"
     },
     "extracted_slots_ground_truth": {
       "service": "virtual ward hotline",
-      "phone": "020 7188 9012",
+      "phone": "020 7946 0012",
       "hours": "eight in the morning and eight at night"
     },
     "verbatim_evidence_spans": [
-      "virtual ward hotline on 020 7188 9012 between eight in the morning and eight at night"
+      "virtual ward hotline on 020 7946 0012 between eight in the morning and eight at night"
     ],
     "labeller_1_grade": "confirmed",
     "labeller_1_rationale": "Exact match for Letter 3 emergency/urgent phone and operating hours.",
@@ -1355,7 +1355,7 @@
     "target_item": "red_flags",
     "perturbation_type": "PERTURBATION_OMISSION_PARTIAL",
     "base_correct_transcript": "If dad gains 2kg in 2 days we call.",
-    "perturbed_transcript": "If dad's breathing gets noticeably worse or his ankles puff up, we'll ring the specialist nurses on 020 7188 5678.",
+    "perturbed_transcript": "If dad's breathing gets noticeably worse or his ankles puff up, we'll ring the specialist nurses on 020 7946 0678.",
     "expected_slots": {
       "weight_threshold": "2 kg in 2 days",
       "symptoms": [
@@ -1369,12 +1369,12 @@
         "breathing gets worse",
         "ankles puff up"
       ],
-      "who_to_call": "020 7188 5678"
+      "who_to_call": "020 7946 0678"
     },
     "verbatim_evidence_spans": [
       "breathing gets noticeably worse",
       "ankles puff up",
-      "specialist nurses on 020 7188 5678"
+      "specialist nurses on 020 7946 0678"
     ],
     "labeller_1_grade": "missed",
     "labeller_1_rationale": "Symptoms and phone are correct, but key 2kg daily weight threshold was omitted.",
@@ -1626,16 +1626,16 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "who_to_call",
     "perturbation_type": "PERTURBATION_WHO_TO_CALL_WRONG",
-    "base_correct_transcript": "Virtual ward hotline is 020 7188 9012.",
-    "perturbed_transcript": "If dad's weight spikes, I ring the virtual ward line on 020 7188 9021.",
+    "base_correct_transcript": "Virtual ward hotline is 020 7946 0012.",
+    "perturbed_transcript": "If dad's weight spikes, I ring the virtual ward line on 020 7946 0021.",
     "expected_slots": {
-      "phone": "020 7188 9012"
+      "phone": "020 7946 0012"
     },
     "extracted_slots_ground_truth": {
-      "phone": "020 7188 9021 (TRANSPOSITION ERROR)"
+      "phone": "020 7946 0021 (TRANSPOSITION ERROR)"
     },
     "verbatim_evidence_spans": [
-      "virtual ward line on 020 7188 9021"
+      "virtual ward line on 020 7946 0021"
     ],
     "labeller_1_grade": "misunderstood",
     "labeller_1_rationale": "Transposed digits (9021 instead of 9012). Call would not connect to clinical team.",
@@ -1688,7 +1688,7 @@
     "base_correct_transcript": "For mild swelling call the nurse, for emergency call 999.",
     "perturbed_transcript": "If my left sock leaves a little mark on my ankle, I should ring 999 for an ambulance.",
     "expected_slots": {
-      "who_to_call": "heart failure nurse 020 7188 5678 (for mild swelling)",
+      "who_to_call": "heart failure nurse 020 7946 0678 (for mild swelling)",
       "emergency_999": "only for crushing chest pain or severe gasping"
     },
     "extracted_slots_ground_truth": {
@@ -1877,12 +1877,12 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "holistic_full_summary",
     "perturbation_type": "PERTURBATION_OMISSION_PARTIAL",
-    "base_correct_transcript": "Furosemide 80mg morning, weigh daily, call nurse on 020 7188 5678 if gain 2kg, clinic Oct 20th.",
+    "base_correct_transcript": "Furosemide 80mg morning, weigh daily, call nurse on 020 7946 0678 if gain 2kg, clinic Oct 20th.",
     "perturbed_transcript": "Dad's furosemide is 80 mg in the morning. He has clinic on October 20th and bloods on the 12th. If he feels unwell we will call the hospital.",
     "expected_slots": {
       "furosemide": "80 mg morning",
       "red_flags": "2 kg in 2 days",
-      "who_to_call": "020 7188 5678",
+      "who_to_call": "020 7946 0678",
       "follow_up": "October 20th"
     },
     "extracted_slots_ground_truth": {
@@ -1911,19 +1911,19 @@
     "speaker": "Efua Mensah (45, carer)",
     "target_item": "red_flags",
     "perturbation_type": "GOLD_CORRECT",
-    "base_correct_transcript": "Weight gain of 2kg in 2 days call 020 7188 5678.",
-    "perturbed_transcript": "Understood. The exact trigger is 2 kg weight gain over two days, or sudden breathlessness. And the exact number to call is the heart failure nurse team on 020 7188 5678.",
+    "base_correct_transcript": "Weight gain of 2kg in 2 days call 020 7946 0678.",
+    "perturbed_transcript": "Understood. The exact trigger is 2 kg weight gain over two days, or sudden breathlessness. And the exact number to call is the heart failure nurse team on 020 7946 0678.",
     "expected_slots": {
       "weight_threshold": "2 kg in 2 days",
-      "who_to_call": "heart failure nurse team 020 7188 5678"
+      "who_to_call": "heart failure nurse team 020 7946 0678"
     },
     "extracted_slots_ground_truth": {
       "weight_threshold": "2 kg weight gain over two days",
-      "who_to_call": "heart failure nurse team on 020 7188 5678"
+      "who_to_call": "heart failure nurse team on 020 7946 0678"
     },
     "verbatim_evidence_spans": [
       "2 kg weight gain over two days",
-      "heart failure nurse team on 020 7188 5678"
+      "heart failure nurse team on 020 7946 0678"
     ],
     "labeller_1_grade": "confirmed",
     "labeller_1_rationale": "Re-teach pass successfully covers the previously missed slots.",

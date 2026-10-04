@@ -1,12 +1,12 @@
-# GUY'S AND ST THOMAS' NHS FOUNDATION TRUST
-## St Thomas' Hospital · Westminster Bridge Road, London SE1 7EH
+# THAMESBANK HOSPITALS TRUST (FICTIONAL)
+## Thamesbank General Hospital · Riverside Road, London
 ### ELECTRONIC DISCHARGE SUMMARY (eDischarge / TTO)
 
 ---
 
 ### 1. PATIENT DEMOGRAPHICS & IDENTIFIERS
 - **Patient Name:** MENSAH, Kwame
-- **NHS Number:** 482 910 3341
+- **NHS Number:** 999 000 0001
 - **Hospital Number (MRN):** TH-882914
 - **Date of Birth:** 14/03/1945 (Age: 81 years)
 - **Gender:** Male
@@ -24,13 +24,13 @@
 ---
 
 ### 2. ENCOUNTER & DISCHARGE DETAILS
-- **Hospital / Location:** St Thomas' Hospital
-- **Ward:** Albert Ward (Cardiology & Acute Frailty)
+- **Hospital / Location:** Thamesbank General Hospital
+- **Ward:** Elm Ward (Cardiology & Acute Frailty)
 - **Admission Date & Time:** 28/09/2026 14:15
 - **Discharge Date & Time:** 04/10/2026 16:30
 - **Admission Method:** Emergency via Emergency Department (A&E)
-- **Discharging Consultant:** Dr Simon Hughes, Consultant Cardiologist (GMC: 4920194)
-- **Discharging Clinician:** Dr Ayesha Patel, Specialty Registrar in Cardiology (GMC: 7401928)
+- **Discharging Consultant:** Dr Simon Hughes, Consultant Cardiologist
+- **Discharging Clinician:** Dr Ayesha Patel, Specialty Registrar in Cardiology
 - **Discharge Destination:** Home with family support
 
 ---
@@ -40,7 +40,7 @@
 - **Clinical Summary:**  
   Kwame Mensah is an 81-year-old gentleman with known ischaemic cardiomyopathy (LVEF 32%) who presented in acute decompensated heart failure. This decompensation was precipitated by a mild community-acquired lower respiratory tract infection (LRTI). On arrival, he was tachypnoeic with bilateral crepitations to mid-zones, bibasal pleural effusions, elevated JVP (+5 cm), and grade 3 pitting oedema extending to mid-shins. 
   
-  During his 6-day admission on Albert Ward, he was managed with IV furosemide boluses (80 mg BD) for 48 hours, leading to 4.2 kg negative fluid balance and substantial symptomatic relief. His chest infection was treated with a 5-day course of oral amoxicillin (completed 03/10/2026). He has now been successfully stepped down to oral diuretics. At time of discharge, chest is clinically clear, JVP is not elevated, and peripheral oedema is resolved to baseline trace ankle swelling.
+  During his 6-day admission on Elm Ward, he was managed with IV furosemide boluses (80 mg BD) for 48 hours, leading to 4.2 kg negative fluid balance and substantial symptomatic relief. His chest infection was treated with a 5-day course of oral amoxicillin (completed 03/10/2026). He has now been successfully stepped down to oral diuretics. At time of discharge, chest is clinically clear, JVP is not elevated, and peripheral oedema is resolved to baseline trace ankle swelling.
 - **Discharge Vitals:** BP 118/74 mmHg, Heart Rate 68 bpm (sinus rhythm), SpO2 97% on room air, Discharge Weight 74.8 kg (Admission Weight: 79.0 kg).
 - **Discharge Bloods:** Creatinine 112 µmol/L (baseline 105 µmol/L), eGFR 56 mL/min/1.73m², K+ 4.4 mmol/L, Na+ 138 mmol/L, NT-proBNP 1,420 pg/mL (down from 4,890 pg/mL on admission).
 
@@ -139,8 +139,8 @@ If Kwame or his daughter Efua observes ANY of the following:
 
 #### Contact Protocols:
 - **PRIMARY URGENT CONTACT (Specialist Team):**
-  - **Service:** St Thomas' Community Heart Failure Nurse Specialist Team
-  - **Direct Telephone Number:** **020 7188 5678**
+  - **Service:** Thamesbank Community Heart Failure Nurse Specialist Team
+  - **Direct Telephone Number:** **020 7946 0678**
   - **Hours:** Monday to Friday, 09:00 to 17:00
   - **Instruction:** Call this number immediately if red flags appear. The specialist nurse can assess and adjust medication without requiring an A&E attendance.
 - **OUT OF HOURS / NON-EMERGENCY:**
@@ -152,8 +152,8 @@ If Kwame or his daughter Efua observes ANY of the following:
 
 ### 10. FOLLOW-UP APPOINTMENTS & PLANNED CARE
 1. **Heart Failure Specialist Outpatient Clinic:**
-   - **Hospital:** St Thomas' Hospital
-   - **Clinic:** Cardiology Specialist Outpatient Suite 3, 3rd Floor Lambeth Wing
+   - **Hospital:** Thamesbank General Hospital
+   - **Clinic:** Cardiology Specialist Outpatient Suite 3, 3rd Floor River Wing
    - **Date & Time:** **Tuesday 20 October 2026 at 10:30 AM** (in 2 weeks)
    - **Seen by:** Dr Simon Hughes (Consultant Cardiologist) & Heart Failure Nurse Specialist
    - **Requirement:** Bring daily weight log and all current medication boxes.
@@ -165,7 +165,7 @@ If Kwame or his daughter Efua observes ANY of the following:
 ---
 
 ### 11. CLINICAL SIGN-OFF
-- **Discharging Doctor:** Dr Ayesha Patel, MBChB MRCP, Cardiology Registrar (GMC 7401928)  
+- **Discharging Doctor:** Dr Ayesha Patel, MBChB MRCP, Cardiology Registrar  
   Signature: *A. Patel* · Date: 04/10/2026
 - **Ward Pharmacist:** H. Campbell, MPharm, Lead Cardiology Pharmacist (GPhC 2078192)  
   Signature: *H. Campbell* · Date: 04/10/2026

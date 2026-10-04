@@ -3,14 +3,14 @@
   "patient_name": "Kwame Mensah",
   "dob": "1945-03-14",
   "age": 81,
-  "nhs_number": "482 910 3341",
+  "nhs_number": "999 000 0001",
   "carer": {
     "name": "Efua Mensah",
     "relationship": "Daughter & Primary Carer",
     "phone": "07700 900123"
   },
-  "trust": "Guy's and St Thomas' NHS Foundation Trust",
-  "hospital": "St Thomas' Hospital",
+  "trust": "Thamesbank Hospitals Trust (fictional)",
+  "hospital": "Thamesbank General Hospital",
   "ward": "Same Day Emergency Care (SDEC) & Ambulatory Frailty Unit",
   "admission_date": "2026-11-02",
   "discharge_date": "2026-11-02",
@@ -100,16 +100,16 @@
     "verbatim_quote": "Weight increase of 1.5 kg (3.3 lbs) or more over 2 consecutive mornings"
   },
   "who_to_call": {
-    "primary_urgent_service": "St Thomas' Hospital Virtual Ward & Ambulatory Frailty Hotline",
-    "primary_urgent_phone": "020 7188 9012",
+    "primary_urgent_service": "Thamesbank General Hospital Virtual Ward & Ambulatory Frailty Hotline",
+    "primary_urgent_phone": "020 7946 0012",
     "operating_hours": "7 days a week, 08:00 to 20:00",
     "out_of_hours": "NHS 111",
     "life_threatening_emergency": "999",
-    "verbatim_quote": "PRIMARY URGENT CONTACT (Virtual Ward & SDEC Team): Service: St Thomas' Hospital Virtual Ward & Ambulatory Frailty Hotline Direct Telephone Number: 020 7188 9012"
+    "verbatim_quote": "PRIMARY URGENT CONTACT (Virtual Ward & SDEC Team): Service: Thamesbank General Hospital Virtual Ward & Ambulatory Frailty Hotline Direct Telephone Number: 020 7946 0012"
   },
   "follow_up_appointment": {
-    "clinic_name": "Guy's Hospital / St Thomas' SDEC Suite, Ground Floor",
-    "location": "Guy's Hospital / St Thomas' SDEC Suite",
+    "clinic_name": "Thamesbank General Hospital SDEC Suite, Ground Floor",
+    "location": "Thamesbank General Hospital SDEC Suite",
     "date_time": "Monday 09 November 2026 at 11:00 AM",
     "timeframe": "7 days",
     "seen_by": "Dr Helen Sanderson & Virtual Ward Lead Nurse",

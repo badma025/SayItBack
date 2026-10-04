@@ -125,7 +125,7 @@ export default function Home() {
               Patient Document (Ground-Truth Source)
             </h2>
             <span className="text-xs text-gray-500 font-medium">
-              Albert Ward Discharge
+              Elm Ward Discharge
             </span>
           </div>
 
@@ -245,7 +245,7 @@ export default function Home() {
       <footer className="bg-white border-t border-gray-200 py-4 px-4 text-center text-xs text-gray-500 mt-auto no-print">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <span>
-            Say It Back · Built for ForgeHacks 2026 (AI + Healthcare Track) · Guy&apos;s &amp; St Thomas&apos; NHS Trust
+            Say It Back · Built for ForgeHacks 2026 (AI + Healthcare Track) · fictional demo data
           </span>
           <span className="font-mono text-gray-400">
             Next.js 14 · pdf.js v3.11 · Deterministic Comparator

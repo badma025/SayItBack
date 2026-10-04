@@ -39,14 +39,14 @@ export function UnderstandingReceipt({
               NHS
             </span>
             <span className="font-bold text-gray-900 text-sm">
-              Guy&apos;s and St Thomas&apos; NHS Foundation Trust
+              Thamesbank Hospitals Trust (fictional)
             </span>
           </div>
           <h2 className="text-xl font-black text-gray-900 tracking-tight">
             DISCHARGE UNDERSTANDING RECEIPT &amp; HANDOVER
           </h2>
           <p className="text-xs text-gray-600 mt-0.5">
-            Bedside teach-back verified prior to departure from Albert Ward.
+            Bedside teach-back verified prior to departure from Elm Ward.
           </p>
         </div>
 
@@ -197,7 +197,7 @@ export function UnderstandingReceipt({
             Ward Clinician / Pharmacist Sign-Off
           </span>
           <span className="text-[11px] text-gray-500 font-mono">
-            Albert Ward · St Thomas&apos;
+            Elm Ward · Thamesbank
           </span>
         </div>
 

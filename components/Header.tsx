@@ -27,7 +27,7 @@ export function Header({
               NHS
             </span>
             <span className="font-semibold tracking-wide">
-              Guy&apos;s and St Thomas&apos; NHS Foundation Trust · ForgeHacks 2026 (AI + Healthcare)
+              Thamesbank Hospitals Trust (fictional) · ForgeHacks 2026 (AI + Healthcare)
             </span>
           </div>
           <div className="flex items-center gap-3">

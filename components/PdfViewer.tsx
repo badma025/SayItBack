@@ -216,7 +216,7 @@ export function PdfViewer({
       {/* Footer verification notice */}
       <div className="bg-slate-50 border-t border-gray-200 px-3 py-1.5 text-[11px] text-gray-600 flex items-center justify-between">
         <span>Golden Path: PDF with genuine text layer (non-circular quote verification)</span>
-        <span className="font-mono text-gray-500">St Thomas&apos; eDischarge (PRSB)</span>
+        <span className="font-mono text-gray-500">Thamesbank eDischarge (PRSB)</span>
       </div>
     </div>
   );

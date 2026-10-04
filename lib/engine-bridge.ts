@@ -237,7 +237,7 @@ export function extractSpokenSlots(transcript: string, isEdited: boolean = true)
     lower.includes("kg") ||
     lower.includes("breathless") ||
     lower.includes("swelling") ||
-    lower.includes("020 7188 5678") ||
+    lower.includes("020 7946 0678") ||
     lower.includes("nurse") ||
     lower.includes("call");
 
