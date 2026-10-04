@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-04T21:14:55.618715+00:00",
+  "model": "sayitback/no-such-model",
+  "note": "A model id Featherless does not host.",
+  "status": 404,
+  "body": {
+    "error": {
+      "message": "The model `sayitback/no-such-model` does not exist.",
+      "type": "invalid_request_error",
+      "param": null,
+      "code": "model_not_found"
+    }
+  }
+}

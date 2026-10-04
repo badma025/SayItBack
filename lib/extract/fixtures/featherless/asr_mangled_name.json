@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-04T21:12:14.229Z",
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "promptHash": "5e278acb5c96b02a",
+  "transcript": "The fruity semi has gone up to eighty milligrams, every morning.",
+  "latencyMs": 1597,
+  "status": 200,
+  "body": {
+    "id": "077c63f5-6cf0-41f7-9910-9334c0414c38",
+    "object": "chat.completion",
+    "created": 1791148330,
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"items\":[{\"kind\":\"medication_change\",\"utterance\":\"The fruity semi has gone up to eighty milligrams, every morning.\",\"slots\":{\"drug\":{\"value\":\"fruity semi\",\"evidence\":\"the fruity semi\"},\"dose\":{\"value\":80,\"unit\":\"mg\",\"evidence\":\"eighty milligrams\"},\"frequency\":{\"value\":\"once_daily\",\"evidence\":\"every morning\"},\"direction\":{\"value\":\"increased\",\"evidence\":\"gone up\"}}}]}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-rss-p1",
+    "usage": {
+      "prompt_tokens": 811,
+      "completion_tokens": 91,
+      "total_tokens": 902,
+      "cached_tokens": 0
+    }
+  }
+}

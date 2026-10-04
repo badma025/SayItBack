@@ -205,7 +205,7 @@ export function TeachBackStation({
         disabled={!transcript.trim() || isEvaluating}
         className="btn-primary w-full text-lg sm:w-auto"
       >
-        Check against the letter
+        {isEvaluating ? "Reading what Kwame said…" : "Check against the letter"}
         <ArrowRight className="h-5 w-5" strokeWidth={2} aria-hidden />
       </button>
     </section>

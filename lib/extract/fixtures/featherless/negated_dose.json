@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-04T21:12:10.983Z",
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "promptHash": "5e278acb5c96b02a",
+  "transcript": "It's not eighty, the nurse said that was a mistake. He stays on forty milligrams of the water tablet, once a day.",
+  "latencyMs": 1431,
+  "status": 200,
+  "body": {
+    "id": "9e267db6-1ae3-4708-b61b-4bcb1fa315c0",
+    "object": "chat.completion",
+    "created": 1791148327,
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"items\":[{\"kind\":\"medication_change\",\"utterance\":\"He stays on forty milligrams of the water tablet, once a day.\",\"slots\":{\"drug\":{\"value\":\"water tablet\",\"evidence\":\"the water tablet\"},\"dose\":{\"value\":40,\"unit\":\"mg\",\"evidence\":\"forty milligrams\"},\"frequency\":{\"value\":\"once_daily\",\"evidence\":\"once a day\"},\"direction\":{\"value\":\"unchanged\",\"evidence\":\"stays on\"}}}],\"questions\":[]}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-rss-p1",
+    "usage": {
+      "prompt_tokens": 825,
+      "completion_tokens": 96,
+      "total_tokens": 921,
+      "cached_tokens": 0
+    }
+  }
+}

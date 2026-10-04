@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-04T21:12:06.446Z",
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "promptHash": "5e278acb5c96b02a",
+  "transcript": "Kwame takes furosemide 80mg every morning. If his weight jumps 2kg we ring 020 7946 0678, and we have a cardiology clinic in two weeks.",
+  "latencyMs": 1488,
+  "status": 200,
+  "body": {
+    "id": "a2c2c08f-7dc2-494a-acc4-f581225f4410",
+    "object": "chat.completion",
+    "created": 1791148320,
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"items\":[{\"kind\":\"medication_change\",\"utterance\":\"Kwame takes furosemide 80mg every morning.\",\"slots\":{\"drug\":{\"value\":\"furosemide\",\"evidence\":\"furosemide\"},\"dose\":{\"value\":80,\"unit\":\"mg\",\"evidence\":\"80mg\"},\"frequency\":{\"value\":\"once_daily\",\"evidence\":\"every morning\"}}},{\"kind\":\"red_flag\",\"utterance\":\"If his weight jumps 2kg we ring 020 7946 0678,\",\"slots\":{\"symptom\":{\"value\":\"weight jumps 2kg\",\"evidence\":\"weight jumps 2kg\"},\"contact\":{\"value\":\"020 7946 0678\",\"evidence\":\"020 7946 0678\"}}},{\"kind\":\"follow_up\",\"utterance\":\"and we have a cardiology clinic in two weeks.\",\"slots\":{\"with_whom\":{\"value\":\"cardiology\",\"evidence\":\"cardiology\"},\"timeframe_days\":{\"value\":14,\"evidence\":\"two weeks\"},\"modality\":{\"value\":\"in_person\",\"evidence\":\"clinic\"}}}]}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-rss-p1",
+    "usage": {
+      "prompt_tokens": 847,
+      "completion_tokens": 236,
+      "total_tokens": 1083,
+      "cached_tokens": 0
+    }
+  }
+}

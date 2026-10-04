@@ -12,6 +12,7 @@ import {
   resolveDrug,
 } from "@sayitback/engine";
 import { type DischargeLetter } from "./letters";
+import { applyRecallGuard, type GuardNote } from "./extract/recall-guard";
 
 /**
  * Converts a structured discharge letter into the engine's VerifiedLetter format.
@@ -294,20 +295,28 @@ export function extractSpokenSlots(transcript: string, isEdited: boolean = true)
 
 /**
  * Runs the deterministic grading pipeline.
+ *
+ * `modelReading` is the grounded slot fill from `/api/extract`, or null when
+ * the model was unavailable. Either way the rules read the transcript too, and
+ * the engine alone grades.
  */
 export function evaluateTeachBack(
   letter: DischargeLetter,
   transcript: string,
   isEdited: boolean = true,
-  pdfGroundTruthText?: string
+  pdfGroundTruthText?: string,
+  modelReading: SpokenExtraction | null = null,
 ): {
   receipt: Receipt;
   spokenExtraction: SpokenExtraction;
   verifiedLetter: VerifiedLetter;
   reteachSteps: ReturnType<typeof reteachPlan>;
+  guardNotes: GuardNote[];
 } {
   const verifiedLetter = buildVerifiedLetter(letter, pdfGroundTruthText);
-  const spokenExtraction = extractSpokenSlots(transcript, isEdited);
+  const rulesExtraction = extractSpokenSlots(transcript, isEdited);
+  const guarded = modelReading ? applyRecallGuard(modelReading, rulesExtraction) : null;
+  const spokenExtraction = guarded ? guarded.extraction : rulesExtraction;
   const receipt = gradeTeachBack(verifiedLetter, spokenExtraction, {
     requireReviewedTranscript: false,
   });
@@ -318,5 +327,6 @@ export function evaluateTeachBack(
     spokenExtraction,
     verifiedLetter,
     reteachSteps,
+    guardNotes: guarded?.notes ?? [],
   };
 }

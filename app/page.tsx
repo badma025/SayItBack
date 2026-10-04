@@ -10,6 +10,9 @@ import { ReteachPanel } from "../components/ReteachPanel";
 import { UnderstandingReceipt } from "../components/UnderstandingReceipt";
 import { DEFAULT_LETTER, type DischargeLetter } from "../lib/letters";
 import { evaluateTeachBack } from "../lib/engine-bridge";
+import { readTranscript, type ReadingSource } from "../lib/extract/client";
+import { type GuardNote } from "../lib/extract/recall-guard";
+import { ReadingSourceNote } from "../components/ReadingSourceNote";
 import { type ExtractedPdfDocument } from "../lib/pdf-parser";
 import { sectionIdFor } from "../lib/status";
 
@@ -25,21 +28,37 @@ export default function Home() {
   const [documentView, setDocumentView] = useState<"letter" | "receipt">("letter");
   const [activeScenarioId, setActiveScenarioId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [readingSource, setReadingSource] = useState<ReadingSource | null>(null);
+  const [guardNotes, setGuardNotes] = useState<GuardNote[]>([]);
   const transcriptRef = useRef<HTMLDivElement>(null);
+  // Only the latest check may update the page; an earlier, slower reply is dropped.
+  const latestCheck = useRef(0);
 
   const handlePdfTextExtracted = useCallback((extracted: ExtractedPdfDocument) => {
     setPdfGroundTruthText(extracted.fullText);
   }, []);
 
   const handleEvaluate = useCallback(
-    (text: string) => {
+    async (text: string) => {
       if (!text.trim()) return;
+      const check = ++latestCheck.current;
       setIsEvaluating(true);
       setError(null);
       try {
-        const result = evaluateTeachBack(currentLetter, text, true, pdfGroundTruthText);
+        // The model only fills slots; if it is slow or down this resolves to rules only.
+        const reading = await readTranscript(text);
+        if (check !== latestCheck.current) return;
+        const result = evaluateTeachBack(
+          currentLetter,
+          text,
+          true,
+          pdfGroundTruthText,
+          reading.extraction,
+        );
         setReceipt(result.receipt);
         setReteachSteps(result.reteachSteps);
+        setReadingSource(reading.source);
+        setGuardNotes(result.guardNotes);
         setDocumentView("letter");
         // Bring the first line that needs attention into view: this is the moment that matters.
         const firstGap = result.receipt.items.find((i) => i.grade !== "confirmed");
@@ -54,7 +73,7 @@ export default function Home() {
         console.error("Evaluation error:", err);
         setError("We couldn't check that answer. Try rephrasing it, or reload the page.");
       } finally {
-        setIsEvaluating(false);
+        if (check === latestCheck.current) setIsEvaluating(false);
       }
     },
     [currentLetter, pdfGroundTruthText],
@@ -67,7 +86,11 @@ export default function Home() {
   };
 
   const handleReset = () => {
+    latestCheck.current++;
+    setIsEvaluating(false);
     setTranscript("");
+    setReadingSource(null);
+    setGuardNotes([]);
     setReceipt(null);
     setReteachSteps([]);
     setActiveScenarioId(null);
@@ -120,6 +143,7 @@ export default function Home() {
           {receipt && (
             <>
               <ComparatorResults receipt={receipt} />
+              {readingSource && <ReadingSourceNote source={readingSource} guardNotes={guardNotes} />}
               <ReteachPanel
                 steps={reteachSteps}
                 onTryAgain={handleTryAgain}
