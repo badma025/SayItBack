@@ -1,22 +1,11 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import {
-  Mic,
-  MicOff,
-  Sparkles,
-  RotateCcw,
-  ArrowRight,
-  ShieldAlert,
-  CheckCircle,
-  HelpCircle,
-  Edit3,
-} from "lucide-react";
+import { Mic, Square, ArrowRight } from "lucide-react";
 
 export interface JudgeScenario {
   id: string;
   title: string;
-  badge: string;
   text: string;
   note: string;
 }
@@ -27,36 +16,33 @@ interface TeachBackStationProps {
   onSubmit: (text: string) => void;
   onScenarioSelect: (scenario: JudgeScenario) => void;
   isEvaluating: boolean;
+  activeScenarioId: string | null;
 }
 
-export const JUDGE_SCENARIOS = [
+export const JUDGE_SCENARIOS: JudgeScenario[] = [
   {
     id: "wow_moment",
-    title: "1. The 15s Wow Moment (Conflicted Dose)",
-    badge: "Rubric Wow",
+    title: "Gets the dose wrong",
     text: "I take the water tablet, once a day like before.",
-    note: "Kwame recalls frequency (once a day) but misses that dose doubled from 40mg to 80mg. Watch frequency turn green while dose turns red!",
+    note: "How often is right. The dose doubled, and he missed it.",
   },
   {
     id: "reteach_corrected",
-    title: "2. Second Pass (Re-teach Dose)",
-    badge: "Loop Complete",
+    title: "Corrects it",
     text: "The water tablet furosemide is increased to 80 milligrams once a day in the morning.",
-    note: "Re-explains ONLY the missing gap using the letter's quote. Now both dose and frequency confirm green!",
+    note: "Second attempt after hearing the letter's own words.",
   },
   {
     id: "full_carer",
-    title: "3. Comprehensive Carer Teach-Back",
-    badge: "All Slots",
+    title: "Carer covers everything",
     text: "Kwame takes furosemide 80mg every morning. If his weight jumps 2kg we ring 020 7946 0678, and we have a cardiology clinic in two weeks.",
-    note: "Covers medication change, red flag threshold, nurse contact, and follow-up appointment.",
+    note: "Medicine, warning sign, who to call and follow-up.",
   },
   {
     id: "advice_question",
-    title: "4. Safety Guardrail: Advice Question",
-    badge: "Safety Gate",
+    title: "Asks for advice",
     text: "Can he take ibuprofen for his knee pain while taking the water tablet?",
-    note: "AI never prescribes or gives advice. Routes directly to 'Questions for your ward pharmacist'.",
+    note: "It never answers. The question goes to the pharmacist.",
   },
 ];
 
@@ -66,196 +52,162 @@ export function TeachBackStation({
   onSubmit,
   onScenarioSelect,
   isEvaluating,
+  activeScenarioId,
 }: TeachBackStationProps) {
   const [isRecording, setIsRecording] = useState(false);
   const [speechSupported, setSpeechSupported] = useState(true);
+  const [micError, setMicError] = useState<string | null>(null);
   const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const SpeechRecognition =
-        (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-
-      if (!SpeechRecognition) {
-        setSpeechSupported(false);
-        return;
-      }
-
-      const recognition = new SpeechRecognition();
-      recognition.continuous = true;
-      recognition.interimResults = true;
-      recognition.lang = "en-GB";
-
-      recognition.onresult = (event: any) => {
-        let currentTranscript = "";
-        for (let i = 0; i < event.results.length; i++) {
-          currentTranscript += event.results[i][0].transcript + " ";
-        }
-        onTranscriptChange(currentTranscript.trim());
-      };
-
-      recognition.onerror = (event: any) => {
-        console.error("Speech recognition error:", event.error);
-        setIsRecording(false);
-      };
-
-      recognition.onend = () => {
-        setIsRecording(false);
-      };
-
-      recognitionRef.current = recognition;
+    if (typeof window === "undefined") return;
+    const SpeechRecognition =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      setSpeechSupported(false);
+      return;
     }
+    const recognition = new SpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = "en-GB";
+    recognition.onresult = (event: any) => {
+      let text = "";
+      for (let i = 0; i < event.results.length; i++) {
+        text += event.results[i][0].transcript + " ";
+      }
+      onTranscriptChange(text.trim());
+    };
+    recognition.onerror = (event: any) => {
+      setMicError(
+        event.error === "not-allowed"
+          ? "Microphone access was blocked. Allow it in the browser, or type instead."
+          : "The microphone stopped. Try again, or type instead.",
+      );
+      setIsRecording(false);
+    };
+    recognition.onend = () => setIsRecording(false);
+    recognitionRef.current = recognition;
   }, [onTranscriptChange]);
 
   const toggleRecording = () => {
     if (!recognitionRef.current) return;
-
+    setMicError(null);
     if (isRecording) {
       recognitionRef.current.stop();
       setIsRecording(false);
-    } else {
-      try {
-        recognitionRef.current.start();
-        setIsRecording(true);
-      } catch (err) {
-        console.error("Failed to start speech recognition:", err);
-      }
+      return;
+    }
+    try {
+      recognitionRef.current.start();
+      setIsRecording(true);
+    } catch {
+      setMicError("The microphone couldn't start. Type instead.");
     }
   };
 
   return (
-    <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-4 sm:p-5 flex flex-col space-y-4">
-      {/* Header */}
-      <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-        <div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-base sm:text-lg font-bold text-gray-900">
-              Bedside Teach-Back Station
-            </h2>
-            <span className="text-[11px] bg-blue-100 text-[#005EB8] px-2 py-0.5 rounded font-semibold">
-              Voice or Typed
-            </span>
-          </div>
-          <p className="text-xs text-gray-500 mt-0.5">
-            Efua holds the phone. Kwame explains what he understands before leaving the ward.
-          </p>
-        </div>
+    <section id="teach-back" aria-labelledby="teach-back-title" className="space-y-6">
+      <div>
+        <h2 id="teach-back-title" className="font-serif text-[1.75rem] font-semibold leading-tight">
+          Ask Kwame to say it back
+        </h2>
+        <p className="mt-1.5 text-muted">
+          In his own words: what changed, what to watch for, who to call, and when he&apos;s next
+          seen. Efua can type or correct what he said.
+        </p>
       </div>
 
-      {/* 1-Click Judge Quick Scenarios */}
-      <div className="space-y-2 bg-slate-50 border border-slate-200 rounded-lg p-3">
-        <div className="flex items-center justify-between">
-          <span className="text-xs font-bold uppercase tracking-wider text-gray-700 flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-            <span>Judge 1-Click Test Scenarios (Try in 10s)</span>
-          </span>
-          <span className="text-[11px] text-gray-500">Click to run immediately</span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {JUDGE_SCENARIOS.map((scenario) => (
-            <button
-              key={scenario.id}
-              onClick={() => {
-                onScenarioSelect(scenario);
-                onSubmit(scenario.text);
-              }}
-              className="text-left p-2.5 rounded-md border border-gray-200 bg-white hover:border-[#005EB8] hover:bg-blue-50/50 transition-all text-xs group relative shadow-2xs"
-            >
-              <div className="flex items-center justify-between gap-1 mb-1">
-                <span className="font-bold text-gray-900 group-hover:text-[#005EB8] line-clamp-1">
-                  {scenario.title}
-                </span>
-                <span className="text-[10px] bg-gray-100 group-hover:bg-blue-100 text-gray-700 group-hover:text-blue-800 px-1.5 py-0.2 rounded font-semibold flex-shrink-0">
-                  {scenario.badge}
-                </span>
-              </div>
-              <p className="text-[11px] text-gray-500 italic line-clamp-1 mb-1">
-                &ldquo;{scenario.text}&rdquo;
-              </p>
-              <p className="text-[10px] text-gray-600 line-clamp-1">{scenario.note}</p>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Spoken Transcript Area */}
-      <div className="space-y-2">
-        <div className="flex items-center justify-between text-xs">
-          <label htmlFor="transcript-input" className="font-bold text-gray-700 flex items-center gap-1.5">
-            <Edit3 className="w-3.5 h-3.5 text-gray-500" />
-            <span>Spoken Transcript (Editable by carer before grading)</span>
-          </label>
-          <div className="flex items-center gap-2">
-            {transcript && (
+      <div>
+        <p className="label mb-2">Try an example</p>
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {JUDGE_SCENARIOS.map((s) => {
+            const active = activeScenarioId === s.id;
+            return (
               <button
-                onClick={() => onTranscriptChange("")}
-                className="text-gray-400 hover:text-gray-600 inline-flex items-center gap-1 text-[11px]"
-                title="Clear transcript"
+                key={s.id}
+                onClick={() => onScenarioSelect(s)}
+                aria-pressed={active}
+                className={`group rounded-lg border px-3.5 py-2.5 text-left transition duration-200 active:translate-y-px ${
+                  active
+                    ? "border-accent bg-accent-soft"
+                    : "border-line bg-paper hover:border-faint"
+                }`}
               >
-                <RotateCcw className="w-3 h-3" />
-                <span>Clear</span>
+                <span className="block font-bold">{s.title}</span>
+                <span className="block text-sm text-muted">{s.note}</span>
               </button>
-            )}
-            <span className="text-[11px] text-gray-400">{transcript.length} chars</span>
-          </div>
+            );
+          })}
         </div>
+      </div>
 
-        <div className="relative">
+      <div>
+        <label htmlFor="transcript-input" className="label mb-2 block">
+          What Kwame said
+        </label>
+        <div
+          className={`rounded-lg border bg-paper transition focus-within:border-accent ${
+            isRecording ? "border-bad" : "border-line"
+          }`}
+        >
           <textarea
             id="transcript-input"
             value={transcript}
             onChange={(e) => onTranscriptChange(e.target.value)}
             rows={4}
-            placeholder="Kwame speaks or carer types: e.g. 'I take the water tablet, once a day like before...'"
-            className="w-full text-sm p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#005EB8] focus:border-transparent outline-none transition-all placeholder:text-gray-400 resize-none font-sans bg-white shadow-inner"
+            placeholder="“I take the water tablet once a day, like before…”"
+            className="block w-full resize-none rounded-t-lg bg-transparent px-4 pt-3.5 text-lg leading-relaxed outline-none placeholder:text-faint"
           />
-
-          {isRecording && (
-            <div className="absolute top-2 right-2 flex items-center gap-1.5 bg-red-100 text-red-700 px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
-              <span>Listening to Kwame...</span>
-            </div>
-          )}
+          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-3 py-2.5">
+            {speechSupported ? (
+              <button
+                onClick={toggleRecording}
+                className={`btn px-3.5 py-2 text-sm ${
+                  isRecording
+                    ? "bg-bad text-paper hover:bg-bad/90"
+                    : "border border-line bg-ground text-ink hover:border-faint"
+                }`}
+              >
+                {isRecording ? (
+                  <>
+                    <Square className="h-3.5 w-3.5 fill-current" aria-hidden />
+                    Stop listening
+                  </>
+                ) : (
+                  <>
+                    <Mic className="h-4 w-4" strokeWidth={1.75} aria-hidden />
+                    Speak
+                  </>
+                )}
+              </button>
+            ) : (
+              <span className="text-sm text-muted">Voice isn&apos;t available in this browser.</span>
+            )}
+            {transcript && !isRecording && (
+              <button
+                onClick={() => onTranscriptChange("")}
+                className="text-sm font-bold text-muted underline-offset-4 hover:text-ink hover:underline"
+              >
+                Clear
+              </button>
+            )}
+          </div>
         </div>
+        <p className="mt-2 text-sm text-faint">
+          {micError ??
+            "Voice uses your browser's speech service, which in Chrome sends audio to Google. Typing works too."}
+        </p>
       </div>
 
-      {/* Microphone and Action Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-        <div className="flex items-center gap-2">
-          {speechSupported ? (
-            <button
-              onClick={toggleRecording}
-              className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg font-bold text-xs transition-all shadow-sm ${
-                isRecording
-                  ? "bg-red-600 hover:bg-red-700 text-white animate-pulse"
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-800 border border-gray-300"
-              }`}
-              title={isRecording ? "Stop Recording" : "Record Voice via Browser Mic"}
-            >
-              {isRecording ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4 text-[#005EB8]" />}
-              <span>{isRecording ? "Stop Recording" : "Speak (Microphone)"}</span>
-            </button>
-          ) : (
-            <span className="text-xs text-gray-500 italic bg-gray-100 px-2 py-1 rounded">
-              Mic not available in this browser. Type in the box above.
-            </span>
-          )}
-
-          <span className="text-[11px] text-gray-500 hidden sm:inline">
-            Audio stays in-browser · Zero external voice APIs
-          </span>
-        </div>
-
-        <button
-          onClick={() => onSubmit(transcript)}
-          disabled={!transcript.trim() || isEvaluating}
-          className="inline-flex items-center gap-2 bg-[#005EB8] hover:bg-[#004b93] text-white px-5 py-2 rounded-lg font-bold text-xs shadow transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          <span>Check Understanding</span>
-          <ArrowRight className="w-4 h-4" />
-        </button>
-      </div>
-    </div>
+      <button
+        onClick={() => onSubmit(transcript)}
+        disabled={!transcript.trim() || isEvaluating}
+        className="btn-primary w-full text-lg sm:w-auto"
+      >
+        Check against the letter
+        <ArrowRight className="h-5 w-5" strokeWidth={2} aria-hidden />
+      </button>
+    </section>
   );
 }
