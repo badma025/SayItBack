@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-04T21:11:48.203Z",
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "promptHash": "5e278acb5c96b02a",
+  "transcript": "I take the water tablet, once a day like before.",
+  "latencyMs": 1883,
+  "status": 200,
+  "body": {
+    "id": "a069d9eb-1e22-49ec-b3cb-c19880496895",
+    "object": "chat.completion",
+    "created": 1791148304,
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"items\":[{\"kind\":\"medication_change\",\"utterance\":\"I take the water tablet, once a day like before.\",\"slots\":{\"drug\":{\"value\":\"water tablet\",\"evidence\":\"the water tablet\"},\"frequency\":{\"value\":\"once_daily\",\"evidence\":\"once a day\"},\"direction\":{\"value\":\"unchanged\",\"evidence\":\"like before\"}}}]}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-rss-p1",
+    "usage": {
+      "prompt_tokens": 809,
+      "completion_tokens": 69,
+      "total_tokens": 878,
+      "cached_tokens": 0
+    }
+  }
+}

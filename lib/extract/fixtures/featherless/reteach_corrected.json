@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-04T21:12:01.152Z",
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "promptHash": "5e278acb5c96b02a",
+  "transcript": "The water tablet furosemide is increased to 80 milligrams once a day in the morning.",
+  "latencyMs": 4828,
+  "status": 200,
+  "body": {
+    "id": "2a7f2174-4e96-404a-9592-bdc80174ba4f",
+    "object": "chat.completion",
+    "created": 1791148308,
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"items\":[{\"kind\":\"medication_change\",\"utterance\":\"The water tablet furosemide is increased to 80 milligrams once a day in the morning.\",\"slots\":{\"drug\":{\"value\":\"furosemide\",\"evidence\":\"furosemide\"},\"lay_name\":{\"value\":\"water tablet\",\"evidence\":\"water tablet\"},\"dose\":{\"value\":80,\"unit\":\"mg\",\"evidence\":\"80 milligrams\"},\"frequency\":{\"value\":\"once_daily\",\"evidence\":\"once a day\"},\"direction\":{\"value\":\"increased\",\"evidence\":\"increased\"}}}]}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-rss-h1",
+    "usage": {
+      "prompt_tokens": 819,
+      "completion_tokens": 116,
+      "total_tokens": 935,
+      "cached_tokens": 0
+    }
+  }
+}

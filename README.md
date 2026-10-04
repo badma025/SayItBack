@@ -50,8 +50,12 @@ flowchart TD
     
     VOICE["Spoken Teach-Back (Bedside Audio)"] --> ASR["Browser Speech Capture / Whisper"]
     ASR --> TRANS["Editable Spoken Transcript"]
+    TRANS --> LLM["LLM slot fill (Qwen2.5-14B via Featherless, server-side)"]
+    LLM --> SPANS["Span gate: every value must quote the transcript"]
+    TRANS --> RULES["Rule parse (parse.ts): recall guard"]
+    SPANS & RULES --> SLOTS["Spoken slots"]
     
-    GT & TRANS --> COMP["Deterministic Slot Comparator (@sayitback/engine)"]
+    GT & SLOTS --> COMP["Deterministic Slot Comparator (@sayitback/engine)"]
     
     COMP --> ASYM{"Asymmetric Grading"}
     ASYM -- "Exact Slot Match" --> GREEN["Confirmed (Green Badge)"]
@@ -113,12 +117,14 @@ No login and no API keys are needed:
 - **In-browser PDF rendering and text extraction via pdf.js:** Reads our synthetic discharge letters (written on PRSB eDischarge headings) and extracts the text layer used as ground truth.
 - **Deterministic Slot Comparator (`@sayitback/engine`):** Compares medicine changes (drug, direction, dose, frequency), red flags and follow-up appointments against quotes from the letter. Covered by 107 unit tests.
 - **Asymmetric Grading:** By design, a mismatch, omission or uncertain value is never marked confirmed. Unit tests cover these cases; the end-to-end false-confirm rate has not been measured yet.
+- **LLM slot extraction with evidence spans (`lib/extract/`):** A server-side route sends the transcript (never the letter) to `Qwen/Qwen2.5-14B-Instruct` on Featherless. Every value it returns must quote the transcript; quotes that aren't there, or don't contain their value, are thrown out and listed in the UI. The rule parser still reads the transcript, adds back anything the model missed, and the engine alone grades. If Featherless is slow (15 s) or down, the app checks by rules only and says so. 43 tests replay real recorded Featherless replies, including two where the model obeyed a prompt injection and the gate refused the output. See [`docs/llm-extraction.md`](docs/llm-extraction.md).
 - **Advice Guardrail:** Questions asking for medical advice are moved to the pharmacist question list instead of being answered.
 - **Voice & text capture:** Browser mic input via the Web Speech API (Chrome sends audio to Google), with an editable text fallback on all platforms.
 - **Large-Print Fridge Sheet:** Print CSS with nurse sign-off block.
 
 ### What doesn't work yet:
-- **No language model in the loop yet.** Extracting slots from the spoken transcript currently uses hand-written phrase rules (`packages/engine/src/parse.ts`). An LLM extraction layer, with these rules kept as a recall guard, is the next milestone.
+- **The model reads the transcript only, not the letter.** Extracting the letter's own slots still uses the hand-built mapping in `lib/engine-bridge.ts` for the three seeded letters.
+- **Negation is not understood.** "It's not eighty, he stays on forty" is never confirmed, but it shows as "couldn't make this out" rather than as a clear mismatch.
 - **Evaluation labels are AI-drafted.** The 64-item teach-back set in `data/eval/` was labelled by an AI agent, not by people. Two team members will label it independently before we report any accuracy or Cohen's kappa (see `data/eval/FROZEN_MANIFEST.json`).
 - **On-device Whisper is not wired in.** `packages/voice` works in its own test harness but the app still uses the Web Speech API.
 - **Mobile Safari:** asks for mic permission each session; the typed fallback is always available.
@@ -136,8 +142,16 @@ cd SayItBack
 # Install dependencies
 npm install
 
+# Optional: the LLM reader. Without a key the app checks by rules only.
+echo "FEATHERLESS_API_KEY=..." > .env.local
+# FEATHERLESS_MODEL=... overrides the default model, e.g. if it goes cold
+
 # Run development server
 npm run dev
+
+# Tests (replay recorded Featherless replies; no network)
+npm test
+cd packages/engine && npm install && npm test
 
 # Open browser at http://localhost:3000
 ```

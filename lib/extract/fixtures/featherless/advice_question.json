@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-04T21:12:08.366Z",
+  "model": "Qwen/Qwen2.5-14B-Instruct",
+  "promptHash": "5e278acb5c96b02a",
+  "transcript": "Can he take ibuprofen for his knee pain while taking the water tablet?",
+  "latencyMs": 1831,
+  "status": 200,
+  "body": {
+    "id": "60e963b4-e32d-44ea-8c97-604487a5029e",
+    "object": "chat.completion",
+    "created": 1791148326,
+    "model": "Qwen/Qwen2.5-14B-Instruct",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"items\":[],\"questions\":[{\"evidence\":\"Can he take ibuprofen for his knee pain while taking the water tablet?\"}]}"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "system_fingerprint": "fp1-rss-p1",
+    "usage": {
+      "prompt_tokens": 813,
+      "completion_tokens": 27,
+      "total_tokens": 840,
+      "cached_tokens": 0
+    }
+  }
+}
