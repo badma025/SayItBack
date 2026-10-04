@@ -44,7 +44,8 @@ def verify():
             all_matched = False
             continue
 
-        actual_hash = hashlib.sha256(file_path.read_bytes()).hexdigest()
+        # Normalise CRLF so the check passes on Windows and Unix checkouts alike
+        actual_hash = hashlib.sha256(file_path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
         if actual_hash == expected_hash:
             print(f"  [PASS] {rel_path} -> {actual_hash[:12]}...")
         else:
@@ -100,17 +101,20 @@ def verify():
     print(f"  Perturbation Types:  {len(perturbation_types)} distinct categories")
     print(f"  Safety Critical:     {sum(1 for i in items if i['is_safety_critical'])} items")
 
-    # 3. Recalculate Cohen's Kappa
+    # 3. Recalculate Cohen's Kappa (only meaningful once two humans have labelled)
     print("-" * 70)
     print("3. Evaluating Inter-Rater Reliability (Cohen's Kappa):")
-    l1 = [i["labeller_1_grade"] for i in items]
-    l2 = [i["labeller_2_grade"] for i in items]
-    recalculated_kappa = cohen_kappa_score(l1, l2)
-    print(f"  Calculated Cohen's Kappa (kappa): {recalculated_kappa:.4f}")
-    print(f"  Manifest Stored Kappa (kappa):     {manifest['cohen_kappa_inter_rater_agreement']:.4f}")
-
-    diff = abs(recalculated_kappa - manifest["cohen_kappa_inter_rater_agreement"])
-    assert diff < 0.0001, f"Kappa mismatch: {recalculated_kappa} vs {manifest['cohen_kappa_inter_rater_agreement']}"
+    stored_kappa = manifest.get("cohen_kappa_inter_rater_agreement")
+    if stored_kappa is None:
+        print(f"  SKIPPED: {manifest.get('label_provenance', 'labels are not human-reviewed yet')}")
+    else:
+        l1 = [i["labeller_1_grade"] for i in items]
+        l2 = [i["labeller_2_grade"] for i in items]
+        recalculated_kappa = cohen_kappa_score(l1, l2)
+        print(f"  Calculated Cohen's Kappa (kappa): {recalculated_kappa:.4f}")
+        print(f"  Manifest Stored Kappa (kappa):     {stored_kappa:.4f}")
+        diff = abs(recalculated_kappa - stored_kappa)
+        assert diff < 0.0001, f"Kappa mismatch: {recalculated_kappa} vs {stored_kappa}"
 
     print("-" * 70)
     print("4. Consensus Grade Distribution:")

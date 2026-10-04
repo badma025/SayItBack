@@ -1,10 +1,11 @@
 {
   "dataset_name": "Say It Back Gold Teach-Back Evaluation Dataset",
-  "version": "1.0.0-FROZEN",
+  "version": "0.1.0-draft",
   "freeze_timestamp": "2026-10-04T20:00:00Z",
-  "status": "FROZEN_BEFORE_PROMPT_TUNING",
+  "status": "DRAFT_AI_LABELS_PENDING_HUMAN_REVIEW",
   "total_items": 64,
-  "cohen_kappa_inter_rater_agreement": 0.949,
+  "label_provenance": "labeller_1_grade and labeller_2_grade were drafted by an AI agent, not by humans. Two team members must label every item independently before this set is frozen; kappa is recomputed then.",
+  "cohen_kappa_inter_rater_agreement": null,
   "breakdown_by_consensus_grade": {
     "confirmed": 30,
     "misunderstood": 23,
@@ -40,7 +41,7 @@
     "data/letters/kwame_letter_3_ambulatory_frailty.md": "4cc43f1516ee142963f8833525fe11f473c4603d51b5674ce4a5a897fc559e0d",
     "data/letters/kwame_letter_3_ambulatory_frailty.json": "8668bb99732dde6377fa082f86edde2a0993e36c1748988781d9d2381d8b8899",
     "data/dictionary/lay_drug_dictionary.json": "9243d435d264b3630c061479a14a2e3abdf3cce64b3e8c51ec61905d80026c3c",
-    "data/eval/teach_back_gold_dataset.json": "b507681bf2583ebf289148b9ee256f987c7f8cd1934c82dafdc31d40c16c0f17",
-    "data/eval/teach_back_gold_dataset.csv": "7476c0fdaf9f82a845ed9bba1753958ebe3cbf34d8bd08bac1df5cbcacd724bc"
+    "data/eval/teach_back_gold_dataset.json": "36ffa073999d6dedbec9c2c4f95c379ad626222d4c493e16c7cda53b089b29b0",
+    "data/eval/teach_back_gold_dataset.csv": "fed01c31ec5f0cb0fc2582cea4ed90725b01d8b30c4a8b9b7d929426e7b1c781"
   }
 }

@@ -41,7 +41,7 @@ Say It Back inverts the architecture:
 - **Zero clinical advice:** The model never diagnoses, titrates, or answers open clinical questions. Questions like *"Can he take ibuprofen?"* are routed to the **Questions for Ward Pharmacist** section on the receipt.
 - **Ground-Truth PDF Text Layer:** Ground-truth text is extracted in-browser using `pdf.js`. Every claim in the discharge letter is verified against exact spans in the PDF text layer.
 - **Asymmetric Grading:** An item is marked `confirmed` only if every critical slot matches the document verbatim. Everything uncertain, vague, or contradictory is marked `not_yet_confirmed`.
-- **In-Browser Privacy:** Voice audio never leaves the browser. Web Speech API and in-browser Whisper workers keep sensitive audio on-device.
+- **Privacy (in progress):** The current build captures voice with the browser's Web Speech API, which in Chrome sends audio to Google for transcription. An in-browser Whisper package (`packages/voice`) that keeps audio on the device is built and tested but not yet wired into the app.
 
 ```mermaid
 flowchart TD
@@ -110,15 +110,18 @@ The live deployment requires zero login, zero credit cards, and zero API keys:
 ## What Works / What Doesn't (Honest Hackathon Disclosure)
 
 ### What Works:
-- **In-browser PDF rendering and text extraction via pdf.js:** Reads authentic multi-page NHS eDischarge documents, extracting ground-truth text layers.
-- **Deterministic Slot Comparator (`@sayitback/engine`):** Evaluates medicine changes, directions, doses, frequencies, red flags, and follow-up appointments with 0% hallucination risk.
-- **Asymmetric Grading:** Mismatches and omissions are guaranteed never to confirm green.
-- **Zero-Advice Guardrail:** Queries asking for medical advice are quarantined to the pharmacist question list.
-- **Cross-browser voice & text capture:** Browser mic input via Web Speech API with an editable textarea fallback on all platforms.
+- **In-browser PDF rendering and text extraction via pdf.js:** Reads our synthetic discharge letters (written on PRSB eDischarge headings) and extracts the text layer used as ground truth.
+- **Deterministic Slot Comparator (`@sayitback/engine`):** Compares medicine changes (drug, direction, dose, frequency), red flags and follow-up appointments against quotes from the letter. Covered by 107 unit tests.
+- **Asymmetric Grading:** By design, a mismatch, omission or uncertain value is never marked confirmed. Unit tests cover these cases; the end-to-end false-confirm rate has not been measured yet.
+- **Advice Guardrail:** Questions asking for medical advice are moved to the pharmacist question list instead of being answered.
+- **Voice & text capture:** Browser mic input via the Web Speech API (Chrome sends audio to Google), with an editable text fallback on all platforms.
 - **Large-Print Fridge Sheet:** Print CSS with nurse sign-off block.
 
-### Limitations / Future Work:
-- **Mobile Safari Web Speech:** Mobile iOS Safari requires user mic permissions per session; typed fallback is always active.
+### What doesn't work yet:
+- **No language model in the loop yet.** Extracting slots from the spoken transcript currently uses hand-written phrase rules (`packages/engine/src/parse.ts`). An LLM extraction layer, with these rules kept as a recall guard, is the next milestone.
+- **Evaluation labels are AI-drafted.** The 64-item teach-back set in `data/eval/` was labelled by an AI agent, not by people. Two team members will label it independently before we report any accuracy or Cohen's kappa (see `data/eval/FROZEN_MANIFEST.json`).
+- **On-device Whisper is not wired in.** `packages/voice` works in its own test harness but the app still uses the Web Speech API.
+- **Mobile Safari:** asks for mic permission each session; the typed fallback is always available.
 - **Multilingual teach-back:** Currently tested on English eDischarge letters (PRSB format); expanding to Twi and Yoruba is planned for post-hackathon.
 
 ---
