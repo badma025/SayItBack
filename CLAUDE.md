@@ -133,3 +133,6 @@ The core principle: the LLM fills slots, and deterministic code decides.
 - `docs/critique/`: three judge-persona critiques. The ML and product critiques have the most detailed Say It Back advice.
 - `docs/ideation/`: design brief, long-list, shortlist and the finalists write-up (`04-finalists.md`).
 - Decision page (private artifact): https://claude.ai/artifact/3p27G6SayKLrfH8e1CCxYr
+
+## Git conventions
+- Never add a "Co-Authored-By: Claude" trailer or any AI attribution to commit messages or PR descriptions.
