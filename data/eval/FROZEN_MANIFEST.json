@@ -1,0 +1,46 @@
+{
+  "dataset_name": "Say It Back Gold Teach-Back Evaluation Dataset",
+  "version": "1.0.0-FROZEN",
+  "freeze_timestamp": "2026-10-04T20:00:00Z",
+  "status": "FROZEN_BEFORE_PROMPT_TUNING",
+  "total_items": 64,
+  "cohen_kappa_inter_rater_agreement": 0.949,
+  "breakdown_by_consensus_grade": {
+    "confirmed": 30,
+    "misunderstood": 23,
+    "missed": 11
+  },
+  "breakdown_by_perturbation_type": {
+    "GOLD_CORRECT": 27,
+    "PERTURBATION_DOSE_OLD": 1,
+    "PERTURBATION_OMISSION_DOSE": 1,
+    "PERTURBATION_TIMING_NOCTURIA": 1,
+    "PERTURBATION_DIRECTION_REVERSED": 4,
+    "PERTURBATION_ASR_PHONETIC_DISTORTION": 4,
+    "PERTURBATION_OMISSION_RED_FLAG": 1,
+    "PERTURBATION_RED_FLAG_THRESHOLD_ERROR": 1,
+    "PERTURBATION_WHO_TO_CALL_WRONG": 4,
+    "PERTURBATION_FOLLOWUP_ERROR": 2,
+    "PERTURBATION_ADVICE_QUESTION": 3,
+    "PERTURBATION_CONFIDENT_HALLUCINATION": 2,
+    "PERTURBATION_DOSE_ARITHMETIC_CONFUSION": 2,
+    "PERTURBATION_DRUG_NAME_CONFUSION": 1,
+    "PERTURBATION_OMISSION_PARTIAL": 6,
+    "PERTURBATION_FREQUENCY_TIMING_ERROR": 3,
+    "PERTURBATION_DOSE_ERROR": 1
+  },
+  "safety_critical_count": 47,
+  "file_hashes": {
+    "data/templates/prsb_discharge_letter_template.md": "16b65473ef273356dfcbb5aa862f464c04e3e9f8f1c3780f5ca0716e7abd5de5",
+    "data/templates/prsb_discharge_letter_template.json": "60262143f84123241064c9ed3c2b29568e2c069183d4e57c28021514c6c84d17",
+    "data/letters/kwame_letter_1_cardiology.md": "472d72864c17a78c5c10c468584dd1720e3d1dfd0677ffff728ab668d5fd1e28",
+    "data/letters/kwame_letter_1_cardiology.json": "c0bfe2cd3764d7dfcdbc84098226d627e506830910150735f8ebb1b9d67ff5e1",
+    "data/letters/kwame_letter_2_renal_titration.md": "674b9736e88639f57bfd1da6b2eaf37d5be1b2d59fc8a4b8b0f22221f03efc3f",
+    "data/letters/kwame_letter_2_renal_titration.json": "d1b3cd80eabf0b36d9280ddd7d6a3cab87272e9b38df57dd0277c72cb896181b",
+    "data/letters/kwame_letter_3_ambulatory_frailty.md": "4cc43f1516ee142963f8833525fe11f473c4603d51b5674ce4a5a897fc559e0d",
+    "data/letters/kwame_letter_3_ambulatory_frailty.json": "8668bb99732dde6377fa082f86edde2a0993e36c1748988781d9d2381d8b8899",
+    "data/dictionary/lay_drug_dictionary.json": "9243d435d264b3630c061479a14a2e3abdf3cce64b3e8c51ec61905d80026c3c",
+    "data/eval/teach_back_gold_dataset.json": "b507681bf2583ebf289148b9ee256f987c7f8cd1934c82dafdc31d40c16c0f17",
+    "data/eval/teach_back_gold_dataset.csv": "7476c0fdaf9f82a845ed9bba1753958ebe3cbf34d8bd08bac1df5cbcacd724bc"
+  }
+}

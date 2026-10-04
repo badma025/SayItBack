@@ -1,0 +1,107 @@
+{
+  "letter_id": "kwame_letter_1_cardiology",
+  "patient_name": "Kwame Mensah",
+  "dob": "1945-03-14",
+  "age": 81,
+  "nhs_number": "482 910 3341",
+  "carer": {
+    "name": "Efua Mensah",
+    "relationship": "Daughter & Primary Carer",
+    "phone": "07700 900123"
+  },
+  "trust": "Guy's and St Thomas' NHS Foundation Trust",
+  "hospital": "St Thomas' Hospital",
+  "ward": "Albert Ward (Cardiology & Acute Frailty)",
+  "admission_date": "2026-09-28",
+  "discharge_date": "2026-10-04",
+  "primary_diagnosis": {
+    "clinical_name": "Acute decompensation of chronic heart failure with reduced ejection fraction (HFrEF - LVEF 32%)",
+    "plain_language": "Heart failure flare-up (water on the lungs and legs due to weakened heart pump)",
+    "verbatim_quote": "Acute decompensation of chronic heart failure with reduced ejection fraction (HFrEF - LVEF 32%)"
+  },
+  "must_know_medicine_changes": [
+    {
+      "drug": "furosemide",
+      "lay_name": "water tablet",
+      "direction": "increased",
+      "previous_dose": "40 mg",
+      "dose": "80 mg",
+      "frequency": "once daily in the morning",
+      "route": "oral",
+      "clinical_rationale": "DOSE INCREASED from 40 mg daily to 80 mg daily due to ongoing fluid retention",
+      "verbatim_quote": "Furosemide 80 mg oral tablets ... Direction of Change: DOSE INCREASED ... Previous Dose: 40 mg once daily in the morning ... New Discharge Dose: 80 mg (take ONE 80 mg tablet or TWO 40 mg tablets) ONCE daily in the morning",
+      "safety_critical": true
+    }
+  ],
+  "unchanged_medicines": [
+    {
+      "drug": "bisoprolol",
+      "lay_name": "beta-blocker / heart rate tablet",
+      "direction": "unchanged",
+      "dose": "2.5 mg",
+      "frequency": "once daily in the morning",
+      "verbatim_quote": "Bisoprolol 2.5 mg oral tablets ... Discharge Dose: 2.5 mg ONCE daily in the morning"
+    },
+    {
+      "drug": "ramipril",
+      "lay_name": "ACE inhibitor / blood pressure tablet",
+      "direction": "unchanged",
+      "dose": "2.5 mg",
+      "frequency": "once daily in the morning",
+      "verbatim_quote": "Ramipril 2.5 mg oral capsules ... Discharge Dose: 2.5 mg ONCE daily in the morning"
+    },
+    {
+      "drug": "atorvastatin",
+      "lay_name": "statin / cholesterol tablet",
+      "direction": "unchanged",
+      "dose": "20 mg",
+      "frequency": "once daily at bedtime (night)",
+      "verbatim_quote": "Atorvastatin 20 mg oral tablets ... Discharge Dose: 20 mg ONCE daily at bedtime (night)"
+    },
+    {
+      "drug": "paracetamol",
+      "lay_name": "pain relief tablet",
+      "direction": "unchanged",
+      "dose": "500 mg to 1,000 mg",
+      "frequency": "up to four times daily as required",
+      "verbatim_quote": "Paracetamol 500 mg oral tablets ... Discharge Dose: 500 mg to 1,000 mg (1 to 2 tablets) up to four times daily AS REQUIRED for pain"
+    }
+  ],
+  "red_flag_symptoms": {
+    "weight_gain_threshold": "2 kg (4.4 lbs) or more over 2 consecutive days",
+    "symptoms": [
+      "Weight gain of 2 kg or more over 2 consecutive days",
+      "Worsening shortness of breath on exertion or lying flat (orthopnoea)",
+      "Noticeable increase in ankle, leg, or lower abdomen swelling",
+      "Persistent dizziness or lightheadedness upon standing"
+    ],
+    "verbatim_quote": "A sudden weight increase of 2 kg (4.4 lbs) or more over 2 consecutive days, or 2.5 kg over one week"
+  },
+  "who_to_call": {
+    "primary_urgent_service": "St Thomas' Community Heart Failure Nurse Specialist Team",
+    "primary_urgent_phone": "020 7188 5678",
+    "operating_hours": "Monday to Friday, 09:00 to 17:00",
+    "out_of_hours": "NHS 111",
+    "life_threatening_emergency": "999",
+    "verbatim_quote": "PRIMARY URGENT CONTACT (Specialist Team): Service: St Thomas' Community Heart Failure Nurse Specialist Team Direct Telephone Number: 020 7188 5678"
+  },
+  "follow_up_appointment": {
+    "clinic_name": "Cardiology Specialist Outpatient Suite 3",
+    "location": "St Thomas' Hospital, 3rd Floor Lambeth Wing",
+    "date_time": "Tuesday 20 October 2026 at 10:30 AM",
+    "timeframe": "2 weeks",
+    "seen_by": "Dr Simon Hughes (Consultant Cardiologist) & Heart Failure Nurse Specialist",
+    "patient_action": "Bring daily weight log and all current medication boxes",
+    "verbatim_quote": "Tuesday 20 October 2026 at 10:30 AM (in 2 weeks)"
+  },
+  "gp_actions": {
+    "action": "Urgent repeat serum U&Es and eGFR blood test within 7 to 10 days (by 14/10/2026)",
+    "verbatim_quote": "Please arrange repeat serum creatinine, electrolytes (Na+, K+), and eGFR by Wednesday 14/10/2026"
+  },
+  "carer_counseling": {
+    "fluid_restriction": "1.5 litres (approx. 2.5 pints) per 24 hours",
+    "weighing_instructions": "Every morning after passing urine, before eating breakfast",
+    "diuretic_timing": "Morning (07:00 - 09:00) to prevent nocturia and nighttime fall risk",
+    "otc_warning": "NEVER take over-the-counter anti-inflammatory painkillers such as ibuprofen, naproxen, or Nurofen"
+  }
+}
