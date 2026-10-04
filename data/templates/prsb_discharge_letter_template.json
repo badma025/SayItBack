@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PRSBDischargeSummarySchema",
+  "description": "Standard UK eDischarge Summary schema (Professional Record Standards Body compliant) with slot definitions for teach-back evaluation",
+  "type": "object",
+  "required": [
+    "document_metadata",
+    "patient_demographics",
+    "encounter_details",
+    "clinical_summary",
+    "diagnoses",
+    "allergies",
+    "discharge_medications",
+    "actions_for_primary_care",
+    "information_given",
+    "red_flag_symptoms",
+    "follow_up_appointments"
+  ],
+  "properties": {
+    "document_metadata": {
+      "type": "object",
+      "required": ["document_type", "care_setting", "hospital_trust", "transmission_timestamp", "status"],
+      "properties": {
+        "document_type": { "type": "string" },
+        "care_setting": { "type": "string" },
+        "hospital_trust": { "type": "string" },
+        "transmission_timestamp": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["draft", "final_signed_off"] }
+      }
+    },
+    "patient_demographics": {
+      "type": "object",
+      "required": ["full_name", "nhs_number", "dob", "age", "gender", "usual_address", "contact_telephone", "primary_carer", "registered_gp"],
+      "properties": {
+        "full_name": { "type": "string" },
+        "nhs_number": { "type": "string", "pattern": "^\\d{3} \\d{3} \\d{4}$" },
+        "dob": { "type": "string", "format": "date" },
+        "age": { "type": "integer" },
+        "gender": { "type": "string" },
+        "usual_address": { "type": "string" },
+        "contact_telephone": { "type": "string" },
+        "primary_carer": {
+          "type": "object",
+          "required": ["full_name", "relationship", "contact_telephone", "role_description"],
+          "properties": {
+            "full_name": { "type": "string" },
+            "relationship": { "type": "string" },
+            "contact_telephone": { "type": "string" },
+            "role_description": { "type": "string" }
+          }
+        },
+        "registered_gp": {
+          "type": "object",
+          "required": ["practice_name", "gp_name", "practice_address", "ods_code"],
+          "properties": {
+            "practice_name": { "type": "string" },
+            "gp_name": { "type": "string" },
+            "practice_address": { "type": "string" },
+            "ods_code": { "type": "string" }
+          }
+        }
+      }
+    },
+    "encounter_details": {
+      "type": "object",
+      "required": ["hospital_name", "ward", "specialty", "admission_date", "discharge_date", "admission_method", "discharging_consultant", "discharge_destination"],
+      "properties": {
+        "hospital_name": { "type": "string" },
+        "ward": { "type": "string" },
+        "specialty": { "type": "string" },
+        "admission_date": { "type": "string", "format": "date" },
+        "discharge_date": { "type": "string", "format": "date" },
+        "admission_method": { "type": "string" },
+        "discharging_consultant": { "type": "string" },
+        "discharge_destination": { "type": "string" }
+      }
+    },
+    "clinical_summary": {
+      "type": "object",
+      "required": ["presenting_complaint", "clinical_narrative", "key_investigations"],
+      "properties": {
+        "presenting_complaint": { "type": "string" },
+        "clinical_narrative": { "type": "string" },
+        "key_investigations": {
+          "type": "object",
+          "properties": {
+            "vitals_at_discharge": { "type": "object" },
+            "biochemistry": { "type": "object" },
+            "echocardiogram": { "type": "string" },
+            "chest_xray": { "type": "string" }
+          }
+        }
+      }
+    },
+    "diagnoses": {
+      "type": "object",
+      "required": ["primary_diagnosis", "plain_language_diagnosis", "secondary_diagnoses"],
+      "properties": {
+        "primary_diagnosis": { "type": "string" },
+        "plain_language_diagnosis": { "type": "string" },
+        "secondary_diagnoses": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "allergies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["causative_agent", "reaction", "severity"],
+        "properties": {
+          "causative_agent": { "type": "string" },
+          "reaction": { "type": "string" },
+          "severity": { "type": "string" }
+        }
+      }
+    },
+    "discharge_medications": {
+      "type": "object",
+      "required": ["changed_medications", "new_medications", "stopped_medications", "unchanged_medications"],
+      "properties": {
+        "changed_medications": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/medication_slot_entry" }
+        },
+        "new_medications": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/medication_slot_entry" }
+        },
+        "stopped_medications": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/medication_slot_entry" }
+        },
+        "unchanged_medications": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/medication_slot_entry" }
+        }
+      }
+    },
+    "actions_for_primary_care": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action_description", "timescale_days", "rationale"],
+        "properties": {
+          "action_description": { "type": "string" },
+          "timescale_days": { "type": "integer" },
+          "target_date": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "information_given": {
+      "type": "object",
+      "required": ["fluid_restriction_litres", "daily_weight_instructions", "diuretic_timing_counseling", "otc_warning"],
+      "properties": {
+        "fluid_restriction_litres": { "type": "number" },
+        "daily_weight_instructions": { "type": "string" },
+        "diuretic_timing_counseling": { "type": "string" },
+        "otc_warning": { "type": "string" }
+      }
+    },
+    "red_flag_symptoms": {
+      "type": "object",
+      "required": ["symptom_triggers", "weight_gain_threshold", "primary_urgent_contact", "out_of_hours_contact", "emergency_contact"],
+      "properties": {
+        "symptom_triggers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "weight_gain_threshold": { "type": "string" },
+        "primary_urgent_contact": {
+          "type": "object",
+          "required": ["service_name", "phone_number", "operating_hours"],
+          "properties": {
+            "service_name": { "type": "string" },
+            "phone_number": { "type": "string" },
+            "operating_hours": { "type": "string" }
+          }
+        },
+        "out_of_hours_contact": { "type": "string" },
+        "emergency_contact": { "type": "string" }
+      }
+    },
+    "follow_up_appointments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["clinic_name", "location", "timescale", "appointment_date_time", "clinician_role", "patient_preparation"],
+        "properties": {
+          "clinic_name": { "type": "string" },
+          "location": { "type": "string" },
+          "timescale": { "type": "string" },
+          "appointment_date_time": { "type": "string" },
+          "clinician_role": { "type": "string" },
+          "patient_preparation": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "medication_slot_entry": {
+      "type": "object",
+      "required": ["drug", "lay_name", "direction", "dose", "frequency", "route"],
+      "properties": {
+        "drug": { "type": "string", "description": "Generic approved drug name" },
+        "lay_name": { "type": "string", "description": "Lay person/colloquial name, e.g. water tablet" },
+        "direction": { "type": "string", "enum": ["started", "stopped", "increased", "decreased", "unchanged"] },
+        "dose": { "type": "string", "description": "Dose with unit, e.g. 80 mg" },
+        "frequency": { "type": "string", "description": "Timing and frequency, e.g. once daily in morning" },
+        "route": { "type": "string", "enum": ["oral", "subcutaneous", "intravenous", "inhaled", "topical"] },
+        "previous_dose": { "type": "string", "description": "Pre-admission dose if changed" },
+        "clinical_rationale": { "type": "string" },
+        "verbatim_text_span": { "type": "string", "description": "Exact substring quote matching the letter text" }
+      }
+    }
+  }
+}
